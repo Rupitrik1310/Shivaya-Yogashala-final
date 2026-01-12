@@ -8,13 +8,17 @@ import shivaLogo from "figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png"
 import { Target, Eye } from "lucide-react";
 import { motion } from "motion/react";
 
+/* ✅ TEACHER IMAGES (LOCAL ASSETS) */
+import yogiRahul from "../assets/Teachers/yogi-rahul.jpg";
+import yogiVishal from "../assets/Teachers/yogi-vishal.jpg";
+
 interface Teacher {
   id: string;
   name: string;
   photo: string;
   experience: string;
   specialization: string[];
-  certifications: string[]; // kept for future use
+  certifications: string[];
   bio: string;
 }
 
@@ -26,7 +30,7 @@ export function AboutPage() {
       id: "1",
       name: "Yogi Rahul Ji",
       experience: "10+ years",
-      photo: "/assets/yogi-rahul.jpg",
+      photo: yogiRahul,
       bio:
         "Yogi Rahul Ji is a young yoga master with a unique ability to attract learners through his dynamic teaching style. He began his yoga journey at a young age at Ganga Darshan Vishwa Yogapeeth (BSY). His yogic path has been shaped through extensive study and practice under many renowned Gurus from different yoga ashrams and schools across India. Professionally qualified with multiple certifications and yoga courses, he teaches 200-hour, 300-hour, and 500-hour Yoga Teacher Training programs. He strongly encourages students in the practice of Ashtanga Yoga, inspiring them deeply on their yogic journey.",
       specialization: ["Founder", "Ashtanga Yoga", "Pranayama"],
@@ -36,7 +40,7 @@ export function AboutPage() {
       id: "2",
       name: "Yogi Vishal Ji",
       experience: "12+ years",
-      photo: "/assets/yogi-vishal.jpg",
+      photo: yogiVishal,
       bio:
         "Yogi Vishal Ji was born in Haridwar, Uttarakhand (India). He has strong experience in the field of Hatha Yoga. He completed both his Bachelor’s and Master’s degrees in Yoga from Gurukul Kangri Vishwavidyalaya. He started his yoga journey at a very young age, and his classes are known to challenge students, make them sweat, and push them to the next level. As a Yoga Alliance 500-hour certified teacher, his teachings inspire and motivate students to understand yoga education in greater depth.",
       specialization: ["Hatha Yoga", "Strength", "Traditional Practices"],
@@ -84,12 +88,6 @@ export function AboutPage() {
                   <p className="text-muted-foreground">
                     Shivaya Yogashala’s mission is to preserve and transmit the authentic wisdom of classical yoga while nurturing skilled, conscious, and compassionate yoga teachers.
                   </p>
-                  <p className="text-muted-foreground">
-                    Rooted in the sacred energy of Upper Tapovan, Rishikesh, we provide Yoga Alliance certified multistyle teacher training programs integrating asana, pranayama, meditation, philosophy, anatomy, and yogic lifestyle.
-                  </p>
-                  <p className="text-muted-foreground">
-                    Our aim is to guide students toward self-discipline, inner awareness, and the confidence to teach yoga globally with integrity and depth.
-                  </p>
                   <p className="italic text-primary pt-3">तद्योगानुशासनम्</p>
                 </CardContent>
               </Card>
@@ -103,10 +101,7 @@ export function AboutPage() {
                     <h3 className="text-secondary">Our Vision</h3>
                   </div>
                   <p className="text-muted-foreground">
-                    Shivaya Yogashala envisions becoming a globally respected center of yogic education, where seekers experience transformation through authentic practice and self-inquiry.
-                  </p>
-                  <p className="text-muted-foreground">
-                    We aspire to cultivate teachers who embody yogic values on and off the mat and carry the lineage of yoga forward with humility, wisdom, and devotion—honoring Rishikesh as the spiritual capital of yoga.
+                    To cultivate authentic yoga teachers who carry yogic wisdom with humility, depth, and devotion.
                   </p>
                 </CardContent>
               </Card>
@@ -118,6 +113,7 @@ export function AboutPage() {
       {/* TEACHERS */}
       <section className="py-20 bg-white">
         <h2 className="text-center text-primary mb-12">Our Experienced Teachers</h2>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
           {teachers.map((t) => (
             <Card key={t.id}>
@@ -126,7 +122,11 @@ export function AboutPage() {
                   <ImageWithFallback
                     src={t.photo}
                     alt={t.name}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${
+                      t.name === "Yogi Rahul Ji"
+                        ? "object-[center_20%]"
+                        : "object-center"
+                    }`}
                   />
                 </div>
               </div>

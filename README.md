@@ -1,11 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
-  # Shivaya Yogashala
+    <title>Shivaya Yogashala</title>
+  </head>
 
-  This is a code bundle for Shivaya Yogashala. The original project is available at https://www.figma.com/design/3xnzaNnagbo7sV0PbvDSzs/Shivaya-Yogashala.
-
-  ## Running the code
-
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

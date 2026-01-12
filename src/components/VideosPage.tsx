@@ -19,7 +19,6 @@ interface Asana {
   image: string;
 }
 
-/* ✅ STATIC DATA — ALL 30 ASANAS (UNCHANGED, ONLY IMAGE PATHS FIXED) */
 const ASANAS: Asana[] = [
   {
     id: "1",
@@ -27,8 +26,7 @@ const ASANAS: Asana[] = [
     sanskritName: "सूर्य नमस्कार",
     difficulty: "Beginner",
     category: "Sequence",
-    description:
-      "A complete body flow for strength and flexibility.",
+    description: "A complete body flow for strength and flexibility.",
     benefits: ["Flexibility", "Strength", "Mental focus"],
     image: "/asanas/beginner/surya-namaskar.jpg",
   },
@@ -338,7 +336,7 @@ export function VideosPage() {
       <MandalaWatermark />
 
       <section className="py-20 text-center bg-gradient-to-br from-primary/10 to-secondary/10">
-        <img src={shivaLogo} className="mx-auto w-28 mb-6" />
+        <img src={shivaLogo} className="mx-auto w-28 mb-6" alt="Shiva Logo" />
         <h1 className="text-primary mb-4">Asana Library</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Explore traditional yoga postures with benefits and guidance.
@@ -363,28 +361,31 @@ export function VideosPage() {
           {displayAsanas.map((asana, index) => {
             const open = selectedAsana === index;
             return (
-              <motion.div key={asana.id}>
+              <motion.div key={asana.id} layout>
                 <Card
-                  className="cursor-pointer"
-                  onClick={() =>
-                    setSelectedAsana(open ? null : index)
-                  }
+                  className="cursor-pointer overflow-hidden flex flex-col h-full shadow-sm hover:shadow-md transition-shadow"
+                  onClick={() => setSelectedAsana(open ? null : index)}
                 >
-                  <ImageWithFallback
-                    src={asana.image}
-                    alt={asana.name}
-                    className="h-56 w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  {/* Fixed Aspect Ratio Container for visual consistency */}
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+                    <ImageWithFallback
+                      src={asana.image}
+                      alt={asana.name}
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
 
-                  <CardContent className="p-4 space-y-3">
-                    <h3 className="text-primary text-center">
-                      {asana.name}
-                    </h3>
-                    <p className="text-sm text-center text-secondary">
-                      {asana.sanskritName}
-                    </p>
+                  <CardContent className="p-4 flex flex-col flex-grow space-y-3">
+                    <div className="text-center">
+                      <h3 className="text-primary font-bold text-lg">
+                        {asana.name}
+                      </h3>
+                      <p className="text-sm text-secondary italic">
+                        {asana.sanskritName}
+                      </p>
+                    </div>
 
                     <Badge className="mx-auto block w-fit">
                       {asana.difficulty}
@@ -392,21 +393,30 @@ export function VideosPage() {
 
                     <AnimatePresence>
                       {open && (
-                        <motion.ul className="text-sm space-y-2">
-                          {asana.benefits.map((b, i) => (
-                            <li key={i} className="flex gap-2">
-                              <Heart className="w-4 h-4 text-secondary" />
-                              {b}
-                            </li>
-                          ))}
-                        </motion.ul>
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="text-sm space-y-2 pt-2 border-t mt-2">
+                            {asana.benefits.map((b, i) => (
+                              <li key={i} className="flex gap-2 items-center">
+                                <Heart className="w-3 h-3 text-secondary fill-secondary" />
+                                <span>{b}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
                       )}
                     </AnimatePresence>
 
-                    <Button className="w-full mt-2">
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      {open ? "Close" : "View Benefits"}
-                    </Button>
+                    <div className="pt-2 mt-auto">
+                      <Button className="w-full" variant={open ? "secondary" : "default"}>
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        {open ? "Close Info" : "View Benefits"}
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
