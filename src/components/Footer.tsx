@@ -49,18 +49,26 @@ export function Footer({ onTabChange }: FooterProps) {
               Rooted in Rishikesh - The Yoga Capital of the
               World.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
+              {/* Instagram Link */}
               <a
-                href="#"
-                className="hover:text-secondary transition-colors"
+                href="https://www.instagram.com/shivayayogashala_?igsh=MWoxZHo4ejUybWxkZQ%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors p-1"
+                aria-label="Follow us on Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={24} />
               </a>
+              {/* YouTube Link */}
               <a
                 href="#"
-                className="hover:text-secondary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors p-1"
+                aria-label="Subscribe on Youtube"
               >
-                <Youtube size={20} />
+                <Youtube size={24} />
               </a>
             </div>
           </div>
@@ -176,7 +184,7 @@ export function Footer({ onTabChange }: FooterProps) {
           </div>
         </div>
 
-        {/* Sanskrit Shloka 4 - Sacred Mantras */}
+        {/* Sanskrit Shloka */}
         <div className="border-t border-ash-grey/20 pt-8 text-center space-y-3">
           <p className="text-secondary italic text-lg">
             ॐ नमः शिवाय
