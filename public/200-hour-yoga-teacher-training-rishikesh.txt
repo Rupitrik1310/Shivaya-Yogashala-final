@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>200 Hour Yoga Teacher Training in Rishikesh | Shivaya Yogashala</title>
+  <meta name="description" content="Join the 200 Hour Multi-Style Yoga Teacher Training in Rishikesh at Shivaya Yogashala. Learn Hatha Yoga, Ashtanga Yoga, pranayama, meditation, and yoga philosophy in the spiritual capital of yoga." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="font-family: Arial, sans-serif; padding: 40px; max-width: 900px; margin: auto; line-height: 1.7;">
+  
+  <h1>200 Hour Yoga Teacher Training in Rishikesh</h1>
+
+  <p>
+    Shivaya Yogashala offers an authentic 200 Hour Multi-Style Yoga Teacher Training in Rishikesh, the yoga capital of the world. This foundational course covers Hatha Yoga, Ashtanga Yoga, pranayama, meditation, anatomy, and yoga philosophy.
+  </p>
+
+  <h2>Course Highlights</h2>
+  <ul>
+    <li>Hatha & Ashtanga Yoga Practice</li>
+    <li>Pranayama and Breathwork</li>
+    <li>Meditation Techniques</li>
+    <li>Yoga Philosophy and History</li>
+    <li>Teaching Methodology</li>
+  </ul>
+
+  <h2>Why Choose Rishikesh</h2>
+  <p>
+    Rishikesh is known as the spiritual home of yoga. Training here connects you to traditional yogic roots, Himalayan energy, and a supportive spiritual environment.
+  </p>
+
+  <p style="margin-top:40px;">
+    👉 <a href="https://shivayayogashala.com" style="font-size:18px;">Visit Shivaya Yogashala Official Website</a>
+  </p>
+
+</body>
+</html>
