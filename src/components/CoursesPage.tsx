@@ -349,6 +349,27 @@ export function CoursesPage({ onNavigate }: CoursesPageProps) {
           </div>
         </div>
       </section>
+            {/* SEO Course Links (for Google ranking) */}
+      <div style={{ marginTop: "80px", fontSize: "14px", color: "#666", textAlign: "center" }}>
+        <p>Yoga Teacher Training Courses in Rishikesh:</p>
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          <li>
+            <a href="/200-hour-yoga-teacher-training-rishikesh.html">
+              200 Hour Yoga Teacher Training in Rishikesh
+            </a>
+          </li>
+          <li>
+            <a href="/300-hour-yoga-teacher-training-rishikesh.html">
+              300 Hour Yoga Teacher Training in Rishikesh
+            </a>
+          </li>
+          <li>
+            <a href="/500-hour-yoga-teacher-training-rishikesh.html">
+              500 Hour Yoga Teacher Training in Rishikesh
+            </a>
+          </li>
+        </ul>
+      </div>
 
       {/* CTA */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
