@@ -14,13 +14,52 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("home");
   const [showAdmin, setShowAdmin] = useState(false);
 
+  // ADMIN MODE CHECK
   useEffect(() => {
-    // Check if admin mode should be shown (when URL has ?admin=true)
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('admin') === 'true') {
+    if (urlParams.get("admin") === "true") {
       setShowAdmin(true);
     }
   }, []);
+
+  // ✅ SEO META + TITLE PER COURSE URL
+  useEffect(() => {
+    const path = window.location.pathname;
+
+    if (path.includes("200-hour-yoga-teacher-training-rishikesh")) {
+      document.title =
+        "200 Hour Yoga Teacher Training in Rishikesh | Shivaya Yogashala";
+      setMeta(
+        "Join 200 Hour Multi-style Yoga Teacher Training in Rishikesh, India. Hatha, Ashtanga, Philosophy, Meditation & Certification at Shivaya Yogashala."
+      );
+    }
+
+    if (path.includes("300-hour-yoga-teacher-training-rishikesh")) {
+      document.title =
+        "300 Hour Yoga Teacher Training in Rishikesh | Advanced TTC";
+      setMeta(
+        "Advance your journey with 300 Hour Yoga Teacher Training in Rishikesh. Deep practice, alignment, philosophy and Yoga Alliance certification."
+      );
+    }
+
+    if (path.includes("500-hour-yoga-teacher-training-rishikesh")) {
+      document.title =
+        "500 Hour Yoga Teacher Training in Rishikesh | Complete Course";
+      setMeta(
+        "Complete 500 Hour Yoga Teacher Training in Rishikesh combining 200 + 300 hours. Master Hatha, Ashtanga and meditation at Shivaya Yogashala."
+      );
+    }
+  }, []);
+
+  function setMeta(description: string) {
+    let meta = document.querySelector("meta[name='description']");
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", description);
+  }
 
   if (showAdmin) {
     return (
