@@ -11,7 +11,19 @@ import { Toaster } from "./components/ui/sonner";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState("home");
+  const getInitialTab = () => {
+  const path = window.location.pathname.replace("/", "");
+
+  if (path === "contact") return "contact";
+  if (path === "courses") return "courses";
+  if (path === "about") return "about";
+  if (path === "videos") return "videos";
+
+  return "home";
+};
+
+const [activeTab, setActiveTab] = useState(getInitialTab());
+
   const [showAdmin, setShowAdmin] = useState(false);
 
   // ADMIN MODE CHECK
@@ -21,6 +33,24 @@ export default function App() {
       setShowAdmin(true);
     }
   }, []);
+
+// 🔥 Sync tab when URL changes (back/forward/manual URL)
+useEffect(() => {
+  const handlePopState = () => {
+    const path = window.location.pathname.replace("/", "");
+
+    if (path === "contact") setActiveTab("contact");
+    else if (path === "courses") setActiveTab("courses");
+    else if (path === "about") setActiveTab("about");
+    else if (path === "videos") setActiveTab("videos");
+    else setActiveTab("home");
+  };
+
+  window.addEventListener("popstate", handlePopState);
+  handlePopState(); // run on load
+
+  return () => window.removeEventListener("popstate", handlePopState);
+}, []);
 
   // ✅ SEO META + TITLE PER COURSE URL
   useEffect(() => {
@@ -89,7 +119,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header activeTab={activeTab} onTabChange={setActiveTab} />
+      <Header
+  activeTab={activeTab}
+  onTabChange={(tab) => {
+    setActiveTab(tab);
+    window.history.pushState({}, "", tab === "home" ? "/" : `/${tab}`);
+  }}
+/>
+
       <main className="flex-1">
         <AnimatePresence mode="wait">
           <motion.div
@@ -103,7 +140,13 @@ export default function App() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer onTabChange={setActiveTab} />
+      <Footer
+  onTabChange={(tab) => {
+    setActiveTab(tab);
+    window.history.pushState({}, "", tab === "home" ? "/" : `/${tab}`);
+  }}
+/>
+
       <Toaster />
     </div>
   );
