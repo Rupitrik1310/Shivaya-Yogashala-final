@@ -218,16 +218,15 @@
               </div>
   
               <h1
-                className="text-4xl md:text-6xl text-primary"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.1)",
-                  WebkitTextStroke:
-                    "1px rgba(255, 255, 255, 0.3)",
-                }}
-              >
-                Welcome to Shivaya Yogashala
-              </h1>
+  className="text-4xl md:text-6xl text-primary"
+  style={{
+    textShadow:
+      "0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.1)",
+    WebkitTextStroke: "1px rgba(255, 255, 255, 0.3)",
+  }}
+>
+  Yoga Teacher Training in Rishikesh
+</h1>
               <h2 className="text-2xl md:text-3xl text-secondary">
                 Yoga Teacher Training Centre
                 <br />
