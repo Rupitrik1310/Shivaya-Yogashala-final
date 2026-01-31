@@ -1,5 +1,5 @@
 import { X, Home, Users, BookOpen, Video, Send } from 'lucide-react';
-import shivaLogo from 'figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png';
+import shivaLogo from '../assets/shivaya-yoga-logo.webp';
 
 interface MobileMenuProps {
   isOpen: boolean;

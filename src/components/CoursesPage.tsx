@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { projectId, publicAnonKey } from "../utils/supabase/info";
 import { Clock, Sparkles, BookOpen, Calendar, User, Globe, Stars } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import shivaLogo from 'figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png';
+import shivaLogo from '../assets/shivaya-yoga-logo.webp';
 import { motion, AnimatePresence } from "motion/react";
 
 interface Course {

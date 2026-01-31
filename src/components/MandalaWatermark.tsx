@@ -1,4 +1,4 @@
-import mandalaImage from 'figma:asset/4397814bb644d6ff043220d55a7577c634037246.png';
+import mandalaImage from '../assets/4397814bb644d6ff043220d55a7577c634037246.webp';
 
 export function MandalaWatermark() {
   return (

@@ -1,6 +1,6 @@
-import rys200Badge from "../assets/1fcd98a64644758c74511279ac772122809ba4a0.png";
-import rys300Badge from "../assets/910ab8f3e2147b5028e6434ae2b861ec06e3ff46.png";
-import rys500Badge from "../assets/58a2cf39959f1b6c62ce1d6d322aeaee75ca2614.png";
+import rys200Badge from "../assets/1fcd98a64644758c74511279ac772122809ba4a0.webp";
+import rys300Badge from "../assets/910ab8f3e2147b5028e6434ae2b861ec06e3ff46.webp";
+import rys500Badge from "../assets/58a2cf39959f1b6c62ce1d6d322aeaee75ca2614.webp";
 
 export function CertificationStamps() {
   const certifications = [

@@ -1,4 +1,4 @@
-import shivaLogo from 'figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png';
+import shivaLogo from '../assets/shivaya-yoga-logo.webp';
 import { motion } from 'motion/react';
 
 export function LoadingSpinner() {

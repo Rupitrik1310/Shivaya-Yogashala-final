@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { HomePage } from "./components/HomePage";
-import { AboutPage } from "./components/AboutPage";
-import { CoursesPage } from "./components/CoursesPage";
-import { VideosPage } from "./components/VideosPage";
-import { ContactPage } from "./components/ContactPage";
+import React, { lazy, Suspense } from "react";
+
+const HomePage = lazy(() => import("./components/HomePage"));
+const AboutPage = lazy(() => import("./components/AboutPage"));
+const CoursesPage = lazy(() => import("./components/CoursesPage"));
+const VideosPage = lazy(() => import("./components/VideosPage"));
+const ContactPage = lazy(() => import("./components/ContactPage"));
 import { AdminPanel } from "./components/AdminPanel";
 import { Toaster } from "./components/ui/sonner";
 import { motion, AnimatePresence } from "framer-motion";
@@ -128,8 +130,9 @@ useEffect(() => {
 />
 
       <main className="flex-1">
-        <AnimatePresence mode="wait">
-          <motion.div
+  <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+    <AnimatePresence mode="wait">
+      <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,8 +141,9 @@ useEffect(() => {
           >
             {renderPage()}
           </motion.div>
-        </AnimatePresence>
-      </main>
+</AnimatePresence>
+</Suspense>
+</main>
       <Footer
   onTabChange={(tab) => {
     setActiveTab(tab);

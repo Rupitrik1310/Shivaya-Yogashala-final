@@ -4,13 +4,13 @@ import { Badge } from "./ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import shivaLogo from "figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png";
+import shivaLogo from "../assets/shivaya-yoga-logo.webp";
 import { Target, Eye } from "lucide-react";
 import { motion } from "motion/react";
 
 /* ✅ TEACHER IMAGES (LOCAL ASSETS) */
-import yogiRahul from "../assets/Teachers/yogi-rahul.jpg";
-import yogiVishal from "../assets/Teachers/yogi-vishal.jpg";
+import yogiRahul from "../assets/Teachers/yogi-rahul.webp";
+import yogiVishal from "../assets/Teachers/yogi-vishal.webp";
 
 interface Teacher {
   id: string;

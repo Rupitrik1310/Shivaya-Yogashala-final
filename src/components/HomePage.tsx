@@ -3,9 +3,9 @@
   import { Card, CardContent } from "./ui/card";
   import { Flower, Heart, Users, Award } from "lucide-react";
   import { ImageWithFallback } from "./figma/ImageWithFallback";
-  import shivaLogo from "figma:asset/dda3bf9d206010d15993d348fc449c47e604a2d7.png";
+  import shivaLogo from "../assets/shivaya-yoga-logo.webp";
   import { CertificationStamps } from "./CertificationStamps";
-  import { motion } from "motion/react";
+  import { motion, LazyMotion, domAnimation } from "motion/react";
   import { LoadingSpinner } from "./LoadingSpinner";
   import { useState, useEffect } from "react";
   import {
@@ -180,7 +180,8 @@
     ];
   
     return (
-      <div className="relative">
+  <LazyMotion features={domAnimation}>
+    <div className="relative">
         <MandalaWatermark />
   
         {/* Hero Section */}
@@ -1151,5 +1152,6 @@
           </div>
         </section>
       </div>
-    );
+</LazyMotion>
+);
   }

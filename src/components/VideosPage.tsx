@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import shivaLogo from "../assets/dda3bf9d206010d15993d348fc449c47e604a2d7.png";
+import shivaLogo from "../assets/shivaya-yoga-logo.webp";
 import { motion, AnimatePresence } from "motion/react";
 import { Sparkles, Heart } from "lucide-react";
 
@@ -28,7 +28,7 @@ const ASANAS: Asana[] = [
     category: "Sequence",
     description: "A complete body flow for strength and flexibility.",
     benefits: ["Flexibility", "Strength", "Mental focus"],
-    image: "/asanas/beginner/surya-namaskar.jpg",
+    image: "/asanas/beginner/surya-namaskar.webp",
   },
   {
     id: "2",
@@ -38,7 +38,7 @@ const ASANAS: Asana[] = [
     category: "Balance",
     description: "Tree Pose improves balance.",
     benefits: ["Balance", "Focus"],
-    image: "/asanas/beginner/vrikshasana.jpg",
+    image: "/asanas/beginner/vrikshasana.webp",
   },
   {
     id: "3",
@@ -48,7 +48,7 @@ const ASANAS: Asana[] = [
     category: "Inversion",
     description: "Downward Dog stretches the spine.",
     benefits: ["Back stretch", "Energy"],
-    image: "/asanas/beginner/adho-mukha-svanasana.jpg",
+    image: "/asanas/beginner/adho-mukha-svanasana.webp",
   },
   {
     id: "4",
@@ -58,7 +58,7 @@ const ASANAS: Asana[] = [
     category: "Seated",
     description: "Lotus Pose for meditation.",
     benefits: ["Calmness", "Posture"],
-    image: "/asanas/intermediate/padmasana.jpg",
+    image: "/asanas/intermediate/padmasana.webp",
   },
   {
     id: "5",
@@ -68,7 +68,7 @@ const ASANAS: Asana[] = [
     category: "Inversion",
     description: "King of all asanas.",
     benefits: ["Mental clarity", "Strength"],
-    image: "/asanas/advanced/shirshasana.jpg",
+    image: "/asanas/advanced/shirshasana.webp",
   },
   {
     id: "6",
@@ -78,7 +78,7 @@ const ASANAS: Asana[] = [
     category: "Standing",
     description: "Mountain Pose alignment.",
     benefits: ["Posture", "Balance"],
-    image: "/asanas/beginner/tadasana.jpg",
+    image: "/asanas/beginner/tadasana.webp",
   },
   {
     id: "7",
@@ -88,7 +88,7 @@ const ASANAS: Asana[] = [
     category: "Standing",
     description: "Triangle Pose stretch.",
     benefits: ["Flexibility", "Digestion"],
-    image: "/asanas/beginner/trikonasana.jpg",
+    image: "/asanas/beginner/trikonasana.webp",
   },
   {
     id: "8",
@@ -98,7 +98,7 @@ const ASANAS: Asana[] = [
     category: "Standing",
     description: "Warrior I strength.",
     benefits: ["Stamina", "Focus"],
-    image: "/asanas/beginner/virabhadrasana-1.jpg",
+    image: "/asanas/beginner/virabhadrasana-1.webp",
   },
   {
     id: "9",
@@ -108,7 +108,7 @@ const ASANAS: Asana[] = [
     category: "Standing",
     description: "Warrior II endurance.",
     benefits: ["Endurance", "Balance"],
-    image: "/asanas/beginner/virabhadrasana-2.jpg",
+    image: "/asanas/beginner/virabhadrasana-2.webp",
   },
   {
     id: "10",
@@ -118,7 +118,7 @@ const ASANAS: Asana[] = [
     category: "Restorative",
     description: "Child’s Pose relaxation.",
     benefits: ["Relaxation", "Calm"],
-    image: "/asanas/beginner/balasana.jpg",
+    image: "/asanas/beginner/balasana.webp",
   },
   {
     id: "11",
@@ -128,7 +128,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Cobra Pose spine opener.",
     benefits: ["Back strength"],
-    image: "/asanas/beginner/bhujangasana.jpg",
+    image: "/asanas/beginner/bhujangasana.webp",
   },
   {
     id: "12",
@@ -138,7 +138,7 @@ const ASANAS: Asana[] = [
     category: "Seated",
     description: "Seated forward bend.",
     benefits: ["Stretch", "Calm"],
-    image: "/asanas/intermediate/paschimottanasana.jpg",
+    image: "/asanas/intermediate/paschimottanasana.webp",
   },
   {
     id: "13",
@@ -148,7 +148,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Bridge Pose energizing.",
     benefits: ["Strength", "Energy"],
-    image: "/asanas/beginner/setu-bandhasana.jpg",
+    image: "/asanas/beginner/setu-bandhasana.webp",
   },
   {
     id: "14",
@@ -158,7 +158,7 @@ const ASANAS: Asana[] = [
     category: "Inversion",
     description: "Plow Pose calm.",
     benefits: ["Flexibility"],
-    image: "/asanas/intermediate/halasana.jpg",
+    image: "/asanas/intermediate/halasana.webp",
   },
   {
     id: "15",
@@ -168,7 +168,7 @@ const ASANAS: Asana[] = [
     category: "Inversion",
     description: "Shoulder Stand.",
     benefits: ["Circulation"],
-    image: "/asanas/intermediate/sarvangasana.jpg",
+    image: "/asanas/intermediate/sarvangasana.webp",
   },
   {
     id: "16",
@@ -178,7 +178,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Fish Pose opener.",
     benefits: ["Breathing"],
-    image: "/asanas/intermediate/matsyasana.jpg",
+    image: "/asanas/intermediate/matsyasana.webp",
   },
   {
     id: "17",
@@ -188,7 +188,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Camel Pose heart opening.",
     benefits: ["Energy"],
-    image: "/asanas/intermediate/ustrasana.jpg",
+    image: "/asanas/intermediate/ustrasana.webp",
   },
   {
     id: "18",
@@ -198,7 +198,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Bow Pose strength.",
     benefits: ["Flexibility"],
-    image: "/asanas/intermediate/dhanurasana.jpg",
+    image: "/asanas/intermediate/dhanurasana.webp",
   },
   {
     id: "19",
@@ -208,7 +208,7 @@ const ASANAS: Asana[] = [
     category: "Twist",
     description: "Spinal twist detox.",
     benefits: ["Digestion"],
-    image: "/asanas/intermediate/ardha-matsyendrasana.jpg",
+    image: "/asanas/intermediate/ardha-matsyendrasana.webp",
   },
   {
     id: "20",
@@ -218,7 +218,7 @@ const ASANAS: Asana[] = [
     category: "Balance",
     description: "Eagle Pose focus.",
     benefits: ["Balance"],
-    image: "/asanas/intermediate/garudasana.jpg",
+    image: "/asanas/intermediate/garudasana.webp",
   },
   {
     id: "21",
@@ -228,7 +228,7 @@ const ASANAS: Asana[] = [
     category: "Arm Balance",
     description: "Crow Pose.",
     benefits: ["Arm strength"],
-    image: "/asanas/advanced/bakasana.jpg",
+    image: "/asanas/advanced/bakasana.webp",
   },
   {
     id: "22",
@@ -238,7 +238,7 @@ const ASANAS: Asana[] = [
     category: "Arm Balance",
     description: "Peacock Pose.",
     benefits: ["Core strength"],
-    image: "/asanas/advanced/mayurasana.jpg",
+    image: "/asanas/advanced/mayurasana.webp",
   },
   {
     id: "23",
@@ -248,7 +248,7 @@ const ASANAS: Asana[] = [
     category: "Inversion",
     description: "Forearm Stand.",
     benefits: ["Balance"],
-    image: "/asanas/advanced/pincha-mayurasana.jpg",
+    image: "/asanas/advanced/pincha-mayurasana.webp",
   },
   {
     id: "24",
@@ -258,7 +258,7 @@ const ASANAS: Asana[] = [
     category: "Splits",
     description: "Full split.",
     benefits: ["Flexibility"],
-    image: "/asanas/advanced/hanumanasana.jpg",
+    image: "/asanas/advanced/hanumanasana.webp",
   },
   {
     id: "25",
@@ -268,7 +268,7 @@ const ASANAS: Asana[] = [
     category: "Balance",
     description: "Dancer Pose.",
     benefits: ["Grace"],
-    image: "/asanas/advanced/natarajasana.jpg",
+    image: "/asanas/advanced/natarajasana.webp",
   },
   {
     id: "26",
@@ -278,7 +278,7 @@ const ASANAS: Asana[] = [
     category: "Backbend",
     description: "Wheel Pose.",
     benefits: ["Energy"],
-    image: "/asanas/advanced/chakrasana.jpg",
+    image: "/asanas/advanced/chakrasana.webp",
   },
   {
     id: "27",
@@ -288,7 +288,7 @@ const ASANAS: Asana[] = [
     category: "Restorative",
     description: "Final relaxation.",
     benefits: ["Relaxation"],
-    image: "/asanas/beginner/savasana.jpg",
+    image: "/asanas/beginner/savasana.webp",
   },
   {
     id: "28",
@@ -298,7 +298,7 @@ const ASANAS: Asana[] = [
     category: "Seated",
     description: "Easy Pose.",
     benefits: ["Calm"],
-    image: "/asanas/beginner/sukhasana.jpg",
+    image: "/asanas/beginner/sukhasana.webp",
   },
   {
     id: "29",
@@ -308,7 +308,7 @@ const ASANAS: Asana[] = [
     category: "Lunge",
     description: "Low Lunge.",
     benefits: ["Strength"],
-    image: "/asanas/beginner/anjaneyasana.jpg",
+    image: "/asanas/beginner/anjaneyasana.webp",
   },
   {
     id: "30",
@@ -318,7 +318,7 @@ const ASANAS: Asana[] = [
     category: "Forward Fold",
     description: "Standing forward fold.",
     benefits: ["Relaxation"],
-    image: "/asanas/beginner/uttanasana.jpg",
+    image: "/asanas/beginner/uttanasana.webp",
   },
 ];
 

@@ -1,11 +1,11 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
-import muladharaChakra from 'figma:asset/bb4d85966627cf9e98978ac3558ef98748eb3fb4.png';
-import svadhisthanaChakra from 'figma:asset/e76e13fb67ce49a3701a03e4781b21c9d3f4cd92.png';
-import manipuraChakra from 'figma:asset/4f4a6f86fc026ea45d508a8c7e322ab0d77004e0.png';
-import anahataChakra from 'figma:asset/c773a2051471dd05ae04d366e6d34b250e81c458.png';
-import vishuddhaChakra from 'figma:asset/4f266c813385f7cecbac595e38805506d11dcdf3.png';
-import ajnaChakra from 'figma:asset/b89116ec932975bb58e32b7d77eb1420e9daf1f6.png';
-import sahasraraChakra from 'figma:asset/2fc477e5854314a628b21ad802ce77fcd2612fea.png';
+import muladharaChakra from '../assets/bb4d85966627cf9e98978ac3558ef98748eb3fb4.webp';
+import svadhisthanaChakra from '../assets/e76e13fb67ce49a3701a03e4781b21c9d3f4cd92.webp';
+import manipuraChakra from '../assets/4f4a6f86fc026ea45d508a8c7e322ab0d77004e0.webp';
+import anahataChakra from '../assets/c773a2051471dd05ae04d366e6d34b250e81c458.webp';
+import vishuddhaChakra from '../assets/4f266c813385f7cecbac595e38805506d11dcdf3.webp';
+import ajnaChakra from '../assets/b89116ec932975bb58e32b7d77eb1420e9daf1f6.webp';
+import sahasraraChakra from '../assets/2fc477e5854314a628b21ad802ce77fcd2612fea.webp';
 
 interface Chakra {
   name: string;

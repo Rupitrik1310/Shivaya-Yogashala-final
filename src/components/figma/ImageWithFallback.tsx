@@ -23,13 +23,14 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
     </div>
   ) : (
     <img 
-      src={src} 
-      alt={alt} 
-      className={className} 
-      style={style} 
-      loading="lazy" // Added lazy loading for performance
-      {...rest} 
-      onError={handleError} 
-    />
+  src={src} 
+  alt={alt} 
+  className={className} 
+  style={style} 
+  loading="lazy"
+  decoding="async"
+  {...rest} 
+  onError={handleError} 
+/>
   )
 }
