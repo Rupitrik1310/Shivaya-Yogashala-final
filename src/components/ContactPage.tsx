@@ -30,9 +30,9 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";        // ✅ FIXED
 import shivaLogo from "../assets/shivaya-yoga-logo.webp";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // ✅ FIXED
 
 interface Course {
   id: string;
@@ -826,3 +826,5 @@ export function ContactPage() {
     </div>
   );
 }
+
+export default ContactPage;

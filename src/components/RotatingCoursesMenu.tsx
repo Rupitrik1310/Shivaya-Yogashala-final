@@ -99,7 +99,7 @@ export function RotatingCoursesMenu({ courses, onNavigate }: RotatingCoursesMenu
                       </span>
                       <span className="text-primary">•</span>
                       <span className="text-secondary">
-                        ₹{activeCourse.price.toLocaleString()}
+                        ₹{Number(course.price || 0).toLocaleString()}
                       </span>
                     </div>
 

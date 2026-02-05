@@ -427,3 +427,5 @@ export function VideosPage() {
     </div>
   );
 }
+
+export default VideosPage;

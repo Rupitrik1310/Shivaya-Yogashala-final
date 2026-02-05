@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from "framer-motion";
 import { X, Home, Users, BookOpen, Video, Send } from 'lucide-react';
 
 interface RotatingMandalaMenuProps {
