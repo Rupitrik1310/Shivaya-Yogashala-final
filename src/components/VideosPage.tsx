@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import shivaLogo from "../assets/shivaya-yoga-logo.webp";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, Heart } from "lucide-react";
 
 interface Asana {
