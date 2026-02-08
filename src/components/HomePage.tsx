@@ -409,10 +409,13 @@ function HomePage({ onNavigate }: HomePageProps) {
                       {/* Course Image */}
                       <div className="relative h-64 md:h-auto overflow-hidden">
                         <ImageWithFallback
-                          src={course.image || img2}
-                          alt={course.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
+  src={course.image || img2}
+  alt={course.title}
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+  sizes="(max-width: 768px) 100vw, 50vw"
+  loading="lazy"
+  decoding="async"
+/>
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
                         {/* Om Symbol Watermark */}
                         <div className="absolute bottom-4 left-4 text-white/30 pointer-events-none">

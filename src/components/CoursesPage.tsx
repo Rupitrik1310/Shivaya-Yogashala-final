@@ -202,11 +202,13 @@
                         {/* Image Section */}
                         <div className="relative h-48 md:h-56 overflow-hidden">
                           <ImageWithFallback
-    src={course.image || img1}
-    alt={course.title}
-    className="w-full h-full object-cover"
-  />
-                          
+  src={course.image}
+  alt={course.title}
+  className="w-full h-full object-cover"
+  loading="lazy"
+  decoding="async"
+  sizes="(max-width: 768px) 100vw, 50vw"
+/>
                           {/* Gradient Overlay */}
                           <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
 
