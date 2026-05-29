@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 
 import { MandalaWatermark } from "./MandalaWatermark";
@@ -32,6 +32,9 @@ import {
 } from "lucide-react";
 
 import { projectId, publicAnonKey } from "../utils/supabase/info";
+import {
+  getGoogleReviewsSummary,
+} from "../utils/googleReviews";
 
 interface Course {
   id: string;
@@ -49,6 +52,7 @@ interface HomePageProps {
 
 function HomePage({ onNavigate }: HomePageProps) {
   const [courses, setCourses] = useState<Course[]>([]);
+  const googleReviews = getGoogleReviewsSummary();
 
   useEffect(() => {
     fetchCourses();
@@ -159,26 +163,16 @@ function HomePage({ onNavigate }: HomePageProps) {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      country: "Delhi, India",
-      text: "Shivaya Yogashala transformed my understanding of yoga. The spiritual depth and authentic Hatha Yoga teaching changed my life completely. The teachers are truly masters of their craft.",
-      rating: 5,
-    },
-    {
-      name: "Rajesh Kumar",
-      country: "Mumbai, India",
-      text: "The ashram environment is perfect for deep learning. The teachers are highly experienced and the traditional approach to yoga here is unparalleled. Highly recommended!",
-      rating: 5,
-    },
-    {
-      name: "Ananya Patel",
-      country: "Bangalore, India",
-      text: "I came as a complete beginner and left as a confident yoga teacher. The 200hr Multistyle YTT course is comprehensive and covers everything from asanas to philosophy beautifully.",
-      rating: 5,
-    },
-  ];
+  const visibleReviews = useMemo(
+    () => googleReviews.reviews.slice(0, 3),
+    [googleReviews.reviews],
+  );
+
+  const formattedRating = googleReviews.rating.toFixed(1);
+  const formattedReviewCount =
+    googleReviews.totalReviews > 0
+      ? `${googleReviews.totalReviews.toLocaleString("en-IN")} Google reviews`
+      : "Google reviews sync live when connected";
 
   return (
     <div className="relative">
@@ -1057,44 +1051,94 @@ function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section
+        className="py-20 bg-white"
+        aria-labelledby="student-reviews-heading"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-primary mb-4">
+            <h2
+              id="student-reviews-heading"
+              className="text-primary mb-4"
+            >
               What Our Students Say
             </h2>
             <div className="w-24 h-1 bg-secondary mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="border-2 border-secondary/20"
+          <motion.div
+            className="max-w-3xl mx-auto mb-12 text-center"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <div className="google-reviews-summary">
+              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                <GoogleReviewsMark />
+                <span>Rated on Google</span>
+              </div>
+              <div className="flex justify-center mb-4">
+                <RatingStars
+                  rating={googleReviews.rating}
+                  size="large"
+                />
+              </div>
+              <div className="google-rating-row">
+                <p className="google-rating-value">
+                  {formattedRating}/5
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {formattedReviewCount}
+                </p>
+              </div>
+              <p className="text-xs text-muted-foreground mt-3">
+                Trusted by students beginning their yoga journey
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="google-reviews-scroll scrollbar-hide">
+            {visibleReviews.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.id}
+                className="google-review-card-shell"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.08,
+                  ease: "easeOut",
+                }}
               >
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex gap-1">
-                    {Array.from({
-                      length: testimonial.rating,
-                    }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-secondary fill-secondary"
-                      />
-                    ))}
-                  </div>
-                  <p className="italic">"{testimonial.text}"</p>
-                  <div className="border-t pt-4">
-                    <p className="font-medium">
-                      {testimonial.name}
+                <Card className="h-full border-2 border-secondary/20">
+                  <CardContent className="p-6 space-y-4">
+                    <RatingStars rating={testimonial.rating} />
+                    <p className="italic">
+                      "{testimonial.text}"
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.country}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="border-t pt-4">
+                      <p className="font-medium">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.country}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
+          </div>
+
+          <div className="flex justify-center mt-10">
+            <Button
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => onNavigate("contact")}
+            >
+              Talk to Yoga Mentor
+            </Button>
           </div>
         </div>
       </section>
@@ -1144,6 +1188,64 @@ function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
     </div>
+  );
+}
+
+function RatingStars({
+  rating,
+  size = "card",
+}: {
+  rating: number;
+  size?: "card" | "large";
+}) {
+  const starClass =
+    size === "large"
+      ? "google-review-star google-review-star-large"
+      : "google-review-star";
+
+  return (
+    <div
+      className="google-review-stars"
+      aria-label={`${rating.toFixed(1)} out of 5 stars`}
+    >
+      {Array.from({ length: 5 }).map((_, index) => {
+        const fillPercent = Math.max(
+          0,
+          Math.min(100, (rating - index) * 100),
+        );
+
+        return (
+          <span
+            key={index}
+            className={`${starClass} relative inline-flex shrink-0`}
+          >
+            <Star
+              className={`${starClass} text-secondary/30`}
+              aria-hidden="true"
+            />
+            <span
+              className="absolute inset-0 overflow-hidden"
+              style={{ width: `${fillPercent}%` }}
+            >
+              <Star
+                className={`${starClass} text-secondary fill-secondary drop-shadow-lg`}
+                aria-hidden="true"
+              />
+            </span>
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
+function GoogleReviewsMark() {
+  return (
+    <span className="inline-flex items-center">
+      <span className="google-reviews-mark">
+        <span className="google-reviews-mark-letter">G</span>
+      </span>
+    </span>
   );
 }
 

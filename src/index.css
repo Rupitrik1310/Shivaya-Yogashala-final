@@ -3602,6 +3602,118 @@ html {
   }
 }
 
+.google-reviews-summary {
+  border: 2px solid color-mix(in oklab, var(--secondary) 20%, transparent);
+  border-radius: .5rem;
+  background: linear-gradient(
+    135deg,
+    #fff 0%,
+    color-mix(in oklab, var(--secondary) 5%, #fff) 52%,
+    color-mix(in oklab, var(--primary) 5%, #fff) 100%
+  );
+  box-shadow: 0 12px 32px color-mix(in oklab, var(--secondary) 14%, transparent);
+  padding: 1.5rem;
+}
+
+.google-rating-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.google-rating-value {
+  color: var(--primary);
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
+}
+
+.google-reviews-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+}
+
+.google-review-card-shell {
+  min-width: 82%;
+  scroll-snap-align: start;
+}
+
+.google-review-stars {
+  display: flex;
+  gap: .375rem;
+}
+
+.google-review-star {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.google-review-star-large {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.google-reviews-mark {
+  display: inline-flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklab, var(--secondary) 20%, transparent);
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
+
+.google-reviews-mark-letter {
+  color: var(--primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+@media (width >= 40rem) {
+  .google-rating-row {
+    flex-direction: row;
+    gap: .75rem;
+  }
+
+  .google-review-card-shell {
+    min-width: 45%;
+  }
+}
+
+@media (width >= 48rem) {
+  .google-reviews-summary {
+    padding: 2rem;
+  }
+
+  .google-rating-value {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+
+  .google-reviews-scroll {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .google-review-card-shell {
+    min-width: 0;
+  }
+
+  .google-review-star-large {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
