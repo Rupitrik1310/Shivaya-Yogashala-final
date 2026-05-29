@@ -375,7 +375,7 @@
               className="bg-white text-primary hover:bg-white/90 text-sm md:text-base h-10 md:h-11"
               onClick={() => onNavigate("contact")}
             >
-              Apply Now - Limited Seats
+              Talk to Yoga Mentor
             </Button>
           </div>
         </section>

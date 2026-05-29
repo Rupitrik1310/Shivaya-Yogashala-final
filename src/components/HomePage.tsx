@@ -314,7 +314,7 @@ function HomePage({ onNavigate }: HomePageProps) {
                 variant="outline"
                 onClick={() => onNavigate("contact")}
               >
-                Apply Now
+                Talk to Yoga Mentor
               </Button>
             </div>
 
@@ -626,7 +626,7 @@ function HomePage({ onNavigate }: HomePageProps) {
                               onNavigate("contact")
                             }
                           >
-                            Enquire via Email TTC
+                            Talk to Yoga Mentor
                           </Button>
                         </div>
                       </CardContent>
@@ -871,8 +871,8 @@ function HomePage({ onNavigate }: HomePageProps) {
                 </h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                   Enroll in any of our yoga teacher training
-                  courses or contact us for personalized
-                  guidance
+                  courses or choose Talk to Yoga Mentor for
+                  personalized guidance
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button
@@ -889,7 +889,7 @@ function HomePage({ onNavigate }: HomePageProps) {
                     className="border-primary text-primary hover:bg-primary/5"
                     onClick={() => onNavigate("contact")}
                   >
-                    Apply Now
+                    Talk to Yoga Mentor
                   </Button>
                 </div>
               </div>
@@ -1130,7 +1130,7 @@ function HomePage({ onNavigate }: HomePageProps) {
               className="bg-white text-primary hover:bg-white/90"
               onClick={() => onNavigate("contact")}
             >
-              Apply for Next Batch
+              Talk to Yoga Mentor
             </Button>
             <Button
               size="lg"

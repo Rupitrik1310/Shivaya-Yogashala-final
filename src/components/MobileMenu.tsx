@@ -13,7 +13,7 @@ const menuItems = [
   { id: 'about', label: 'About Us', icon: Users },
   { id: 'courses', label: 'Courses & TTC', icon: BookOpen },
   { id: 'videos', label: 'Asana Library', icon: Video },
-  { id: 'contact', label: 'Apply Now', icon: Send },
+  { id: 'contact', label: 'Talk to Yoga Mentor', icon: Send },
 ];
 
 export function MobileMenu({ isOpen, onClose, activeTab, onTabChange }: MobileMenuProps) {

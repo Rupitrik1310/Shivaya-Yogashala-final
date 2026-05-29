@@ -241,13 +241,13 @@ export function ContactPage() {
         );
       } else {
         toast(
-          "Application received! Please also contact us via WhatsApp to confirm your enrollment.",
+          "Application received! Please choose Talk to Yoga Mentor to confirm your enrollment.",
         );
       }
     } catch (error) {
       console.error("Error submitting enrollment:", error);
       toast(
-        "Please contact us directly via WhatsApp or email to complete your enrollment.",
+        "Please choose Talk to Yoga Mentor or email to complete your enrollment.",
       );
       // Still allow submission via WhatsApp as fallback
       setSubmitted(true);
@@ -328,7 +328,7 @@ export function ContactPage() {
     );
     const message = `Namaste!\n\nI'm interested in joining Shivaya Yogashala.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCountry: ${formData.country}\nYoga Experience: ${formData.experience}\nInterested Course: ${selectedCourse?.title || "Not specified"}\n\nMessage: ${formData.message}\n\nॐ नमः शिवाय (Om Namah Shivaya)`;
 
-    const whatsappUrl = `https://wa.me/919288663019?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/918126071805?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -374,7 +374,7 @@ export function ContactPage() {
                 className="flex items-center gap-2"
               >
                 <MessageCircle size={18} />
-                Chat on WhatsApp
+                Talk to Yoga Mentor
               </Button>
             </div>
           </CardContent>
@@ -509,7 +509,7 @@ export function ContactPage() {
                               e.target.value,
                             )
                           }
-                          placeholder="+91 92886 63019"
+                          placeholder="+91 81260 71805"
                         />
                       </div>
                     </div>
@@ -711,10 +711,10 @@ export function ContactPage() {
                     <div>
                       <p className="font-medium">Phone</p>
                       <p className="text-sm text-muted-foreground">
-                        +91 92886 63019
+                        +91 81260 71805
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        WhatsApp Available 24/7
+                        Talk to Yoga Mentor
                       </p>
                     </div>
                   </div>
@@ -738,7 +738,7 @@ export function ContactPage() {
                   <div className="text-center">
                     <MessageCircle className="w-12 h-12 text-green-600 mx-auto mb-3" />
                     <h3 className="text-primary mb-2">
-                      Quick Contact via WhatsApp
+                      Talk to Yoga Mentor
                     </h3>
                     <p className="text-sm text-muted-foreground mb-4">
                       Get instant response to your queries
@@ -751,7 +751,7 @@ export function ContactPage() {
                         size={18}
                         className="mr-2"
                       />
-                      Chat on WhatsApp
+                      Talk to Yoga Mentor
                     </Button>
                   </div>
                 </CardContent>

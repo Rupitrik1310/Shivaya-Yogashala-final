@@ -16,7 +16,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
     { id: "about", label: "About Us" },
     { id: "courses", label: "Courses & TTC" },
     { id: "videos", label: "Asana Library" },
-    { id: "contact", label: "Apply Now" },
+    { id: "contact", label: "Talk to Yoga Mentor" },
   ];
 
   return (

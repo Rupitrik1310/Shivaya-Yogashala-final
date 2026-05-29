@@ -168,7 +168,7 @@ export function Footer({ onTabChange }: FooterProps) {
               <li className="flex items-center gap-2">
                 <Phone size={16} />
                 <span>
-                  +91 92886 63019 (WhatsApp Available)
+                  +91 81260 71805 (Talk to Yoga Mentor)
                 </span>
               </li>
               <li className="flex items-center gap-2">
