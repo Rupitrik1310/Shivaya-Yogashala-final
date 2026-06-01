@@ -158,7 +158,7 @@ When users click "Chat on WhatsApp", it opens WhatsApp with:
 - Course selection
 - Instant communication
 
-**Phone Number**: +91 92886 63019 (Update this in ContactPage.tsx)
+**Phone Number**: +91 9693054028 (Update this in ContactPage.tsx)
 
 ---
 
@@ -236,7 +236,7 @@ Fully optimized for:
 Edit `/components/ContactPage.tsx` and `/components/Footer.tsx`
 
 ### Change WhatsApp Number
-Find `wa.me/919288663019` in ContactPage.tsx and update
+Find `wa.me/919693054028` in ContactPage.tsx and update
 
 ### Add More Teachers/Courses
 Use the admin panel or API endpoints
@@ -253,7 +253,7 @@ Create component in `/components/` and add to App.tsx routing
 
 For questions or customization:
 - Email: shivayayogashala09@gmail.com
-- WhatsApp: +91 92886 63019
+- WhatsApp: +91 9693054028
 
 ---
 

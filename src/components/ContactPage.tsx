@@ -328,7 +328,7 @@ export function ContactPage() {
     );
     const message = `Namaste!\n\nI'm interested in joining Shivaya Yogashala.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCountry: ${formData.country}\nYoga Experience: ${formData.experience}\nInterested Course: ${selectedCourse?.title || "Not specified"}\n\nMessage: ${formData.message}\n\nॐ नमः शिवाय (Om Namah Shivaya)`;
 
-    const whatsappUrl = `https://wa.me/918126071805?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919693054028?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -509,7 +509,7 @@ export function ContactPage() {
                               e.target.value,
                             )
                           }
-                          placeholder="+91 81260 71805"
+                          placeholder="+91 9693054028"
                         />
                       </div>
                     </div>
@@ -711,7 +711,7 @@ export function ContactPage() {
                     <div>
                       <p className="font-medium">Phone</p>
                       <p className="text-sm text-muted-foreground">
-                        +91 81260 71805
+                        +91 9693054028
                       </p>
                       <p className="text-xs text-muted-foreground">
                         Talk to Yoga Mentor

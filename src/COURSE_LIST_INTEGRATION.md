@@ -55,7 +55,7 @@
 Each course card now has a WhatsApp button that:
 - Opens WhatsApp in new tab
 - Pre-fills message: "Hi! I'm interested in the [Course Name]. Can you provide more details?"
-- Uses your WhatsApp number: **+91 92886 63019**
+- Uses your WhatsApp number: **+91 9693054028**
 
 ---
 
@@ -144,7 +144,7 @@ The new layout is fully responsive:
 ### WhatsApp Button Logic:
 ```typescript
 onClick={() => {
-  const whatsappNumber = "919288663019";
+  const whatsappNumber = "919693054028";
   const message = `Hi! I'm interested in the ${course.title}. Can you provide more details?`;
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
 }}
@@ -259,7 +259,7 @@ Test the new course list:
    Can you provide more details?
    ```
 4. **User sends** message
-5. **You receive** inquiry on WhatsApp: **+91 92886 63019**
+5. **You receive** inquiry on WhatsApp: **+91 9693054028**
 
 ### Benefits:
 - ✅ Instant communication

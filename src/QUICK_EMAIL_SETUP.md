@@ -114,7 +114,7 @@ Use this fancy HTML template instead (copy/paste into EmailJS template editor):
         <p style="text-align: center; color: #888; font-size: 14px;">
             <strong style="color: #D4A056;">ॐ नम�� शिवाय</strong><br>
             Shivaya Yogashala | Rishikesh, India<br>
-            +91 92886 63019 | shivayayogashala09@gmail.com
+            +91 9693054028 | shivayayogashala09@gmail.com
         </p>
     </div>
 </div>

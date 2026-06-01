@@ -61,7 +61,7 @@ Detailed list → Full information → Dual CTAs (Enroll + WhatsApp)
 Each course now has a WhatsApp button that:
 - Opens WhatsApp automatically
 - Pre-fills message: "Hi! I'm interested in the [Course Name]. Can you provide more details?"
-- Uses your number: **+91 92886 63019**
+- Uses your number: **+91 9693054028**
 
 **Benefits:**
 - ✅ Instant student inquiries
@@ -245,7 +245,7 @@ If it becomes a directory again:
 3. Check `/NETLIFY_TROUBLESHOOTING.md`
 
 ### WhatsApp Not Working?
-1. Verify phone number: **+91 92886 63019**
+1. Verify phone number: **+91 9693054028**
 2. Test on mobile device
 3. Check browser console for errors
 

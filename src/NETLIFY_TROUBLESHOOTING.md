@@ -345,7 +345,7 @@ If still not working:
 
 1. **Verify WhatsApp URL** in ContactPage.tsx:
    ```tsx
-   https://wa.me/919288663019?text=...
+   https://wa.me/919693054028?text=...
    ```
 
 2. **Test on mobile device** (works better than desktop)
@@ -353,11 +353,11 @@ If still not working:
 3. **Check phone number format:**
    - Must include country code
    - No spaces or special characters
-   - Format: `919288663019`
+   - Format: `919693054028`
 
 4. **Test URL directly:**
    ```
-   https://wa.me/919288663019?text=Hello
+   https://wa.me/919693054028?text=Hello
    ```
 
 ---

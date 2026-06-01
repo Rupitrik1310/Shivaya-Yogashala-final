@@ -121,7 +121,7 @@ The website uses **EmailJS** to send email notifications when students submit en
         <div class="footer">
             <p><strong>ॐ नमः शिवाय</strong> (Om Namaḥ Śivāya)</p>
             <p>Shivaya Yogashala | Tapovan, Rishikesh, Uttarakhand 249137, India</p>
-            <p>+91 92886 63019 | shivayayogashala09@gmail.com</p>
+            <p>+91 9693054028 | shivayayogashala09@gmail.com</p>
         </div>
     </div>
 </body>
@@ -174,7 +174,7 @@ The following variables are automatically populated in the email:
 | `{{to_email}}` | Recipient email | shivayayogashala09@gmail.com |
 | `{{student_name}}` | Student's full name | Priya Sharma |
 | `{{student_email}}` | Student's email | priya@example.com |
-| `{{student_phone}}` | Student's phone | +91 92886 63019 |
+| `{{student_phone}}` | Student's phone | +91 9693054028 |
 | `{{student_country}}` | Student's country | India |
 | `{{student_experience}}` | Yoga experience level | Beginner (6 months - 1 year) |
 | `{{course_title}}` | Interested course | 200 Hour Multi-style Yoga Teacher Training |
@@ -258,7 +258,7 @@ The following variables are automatically populated in the email:
 
 Students can also reach you via:
 
-1. **WhatsApp**: +91 92886 63019 (Click-to-chat button on Contact page)
+1. **WhatsApp**: +91 9693054028 (Click-to-chat button on Contact page)
 2. **Direct Email**: Click on email address to open email client
 3. **Admin Panel**: View all enrollments in real-time
 
@@ -310,7 +310,7 @@ If you need help setting up EmailJS:
 ## Contact Information Summary
 
 **Primary Email**: shivayayogashala09@gmail.com  
-**WhatsApp**: +91 92886 63019  
+**WhatsApp**: +91 9693054028  
 **Location**: Tapovan, Rishikesh, Uttarakhand 249137, India  
 
 ---

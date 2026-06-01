@@ -45,7 +45,7 @@ Your website has these features ready to use:
 - ✅ **Student Enrollment Form** - Multi-step with validation
 - ✅ **Database Storage** - All data saved to Supabase
 - ✅ **Admin Panel** - Manage teachers, courses, videos, and view enrollments
-- ✅ **WhatsApp Integration** - Direct chat button (+91 92886 63019)
+- ✅ **WhatsApp Integration** - Direct chat button (+91 9693054028)
 - ✅ **Mobile Responsive** - Works perfectly on all devices
 
 ### ⏳ Needs Setup
@@ -81,7 +81,7 @@ Your website has these features ready to use:
 
 4. **Respond to Students**:
    - Use email: shivayayogashala09@gmail.com
-   - Use WhatsApp: +91 92886 63019
+   - Use WhatsApp: +91 9693054028
    - Reply within 24-48 hours
 
 ---
@@ -149,7 +149,7 @@ Your website has these features ready to use:
 Your website displays:
 
 - **Email**: shivayayogashala09@gmail.com
-- **WhatsApp**: +91 92886 63019
+- **WhatsApp**: +91 9693054028
 - **Location**: Tapovan, Rishikesh, Uttarakhand 249137, India
 
 These appear on:
@@ -306,4 +306,4 @@ You have a beautiful, fully-functional yoga school website with:
 
 *Website built for Shivaya Yogashala*  
 *Tapovan, Rishikesh, Uttarakhand 249137, India*  
-*shivayayogashala09@gmail.com | +91 92886 63019*
+*shivayayogashala09@gmail.com | +91 9693054028*

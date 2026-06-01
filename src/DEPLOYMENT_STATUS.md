@@ -120,9 +120,9 @@ Test: Send test email
 
 | Item | Value | Status |
 |------|-------|--------|
-| **Phone** | +91 92886 63019 | ✅ Updated |
+| **Phone** | +91 9693054028 | ✅ Updated |
 | **Email** | shivayayogashala09@gmail.com | ✅ Verified |
-| **WhatsApp** | https://wa.me/919288663019 | ✅ Working |
+| **WhatsApp** | https://wa.me/919693054028 | ✅ Working |
 | **Address** | Tapovan, Rishikesh, Uttarakhand 249137 | ✅ Accurate |
 
 ---

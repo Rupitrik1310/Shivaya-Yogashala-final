@@ -43,7 +43,7 @@
 - [x] Indian cultural authenticity
 
 ### 4. Content ✅
-- [x] Contact info accurate (+91 92886 63019)
+- [x] Contact info accurate (+91 9693054028)
 - [x] Email correct (shivayayogashala09@gmail.com)
 - [x] Sanskrit shlokas with translations
 - [x] Rupee (₹) symbol used throughout
@@ -300,9 +300,9 @@ Deploy immediately. The website is production-ready and will impress users with 
 
 ## 📞 Verified Contact Information
 
-✅ **Phone:** +91 92886 63019  
+✅ **Phone:** +91 9693054028  
 ✅ **Email:** shivayayogashala09@gmail.com  
-✅ **WhatsApp:** https://wa.me/919288663019  
+✅ **WhatsApp:** https://wa.me/919693054028  
 ✅ **Address:** Tapovan, Rishikesh, Uttarakhand 249137, India
 
 All contact information is accurate and consistent across:

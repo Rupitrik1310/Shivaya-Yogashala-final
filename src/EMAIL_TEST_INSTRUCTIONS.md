@@ -320,7 +320,7 @@ Submitted On: [Date and Time]
 
 ॐ नमः शिवाय (Om Namaḥ Śivāya)
 Shivaya Yogashala | Rishikesh, India
-+91 92886 63019 | shivayayogashala09@gmail.com
++91 9693054028 | shivayayogashala09@gmail.com
 ```
 
 ---

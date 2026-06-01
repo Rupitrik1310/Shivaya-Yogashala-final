@@ -61,9 +61,9 @@
 ---
 
 ### 4. **Phone Number & Contact Information** ✅
-- ✅ Phone: +91 92886 63019 (updated throughout)
+- ✅ Phone: +91 9693054028 (updated throughout)
 - ✅ Email: shivayayogashala09@gmail.com
-- ✅ WhatsApp URL: `https://wa.me/919288663019`
+- ✅ WhatsApp URL: `https://wa.me/919693054028`
 - ✅ Address: Tapovan, Rishikesh, Uttarakhand 249137, India
 
 **Locations Updated:**
@@ -342,7 +342,7 @@ Follow: `/QUICK_EMAIL_SETUP.md`
 - Test email sending
 
 ### 3. Verify Contact Information ✅
-- Phone: +91 92886 63019 ✅
+- Phone: +91 9693054028 ✅
 - Email: shivayayogashala09@gmail.com ✅
 - Address: Tapovan, Rishikesh ✅
 

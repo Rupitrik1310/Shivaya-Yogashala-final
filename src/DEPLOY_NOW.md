@@ -17,7 +17,7 @@ Your website has been thoroughly checked and is **READY FOR DEPLOYMENT**.
 ✅ Responsive Design (Mobile, Tablet, Desktop)  
 ✅ Sacred Design Elements (Mandalas, Om symbols, Chakras)  
 ✅ Icons & Emojis (All replaced with professional icons)  
-✅ Contact Info (Phone: +91 92886 63019)  
+✅ Contact Info (Phone: +91 9693054028)  
 ✅ WhatsApp Integration  
 ✅ Loading States & Error Handling  
 
@@ -87,7 +87,7 @@ Your authentic Indian yoga website is live with:
 
 ## 📞 Contact Information Verified
 
-- **Phone:** +91 92886 63019
+- **Phone:** +91 9693054028
 - **Email:** shivayayogashala09@gmail.com
 - **WhatsApp:** Working (same number)
 - **Address:** Tapovan, Rishikesh, Uttarakhand 249137, India
