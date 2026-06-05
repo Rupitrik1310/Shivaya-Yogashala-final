@@ -509,7 +509,7 @@ export function ContactPage() {
                               e.target.value,
                             )
                           }
-                          placeholder="+91 9693054028"
+                          placeholder="+91 96930 54028"
                         />
                       </div>
                     </div>
@@ -711,7 +711,7 @@ export function ContactPage() {
                     <div>
                       <p className="font-medium">Phone</p>
                       <p className="text-sm text-muted-foreground">
-                        +91 9693054028
+                        +91 96930 54028
                       </p>
                       <p className="text-xs text-muted-foreground">
                         Talk to Yoga Mentor
