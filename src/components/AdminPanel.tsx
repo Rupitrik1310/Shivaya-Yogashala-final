@@ -146,7 +146,7 @@ export function AdminPanel() {
         deposit: 20000,
         accreditation: "Yoga Alliance RYT 200 Certified",
         teacherId: "",
-        duration: "26 Days | Level: Beginner / Foundation",
+        duration: "26 Days | Level: Introductory / Foundation",
         image: "https://images.unsplash.com/photo-1758797315487-b3b225dff7d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b2dhJTIwdGVhY2hlciUyMHRyYWluaW5nJTIwZ3JvdXB8ZW58MXx8fHwxNzYyMTAxMjg5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
       {
@@ -179,7 +179,7 @@ export function AdminPanel() {
       },
       {
         title: "500 Hour Multi-Style Yoga Teacher Training in Rishikesh",
-        description: "Our 500 Hour Yoga Teacher Training is a complete and transformative journey from foundation to mastery. Designed for beginners and advanced level practitioners, this course integrates traditional yoga, helping you build a strong foundation, deepen your knowledge and refine your teaching skills. Rooted in ancient wisdom and taught by experienced masters in Rishikesh.",
+        description: "Our 500 Hour Yoga Teacher Training is a complete and transformative journey from foundation to mastery. Designed for introductory and advanced level practitioners, this course integrates traditional yoga, helping you build a strong foundation, deepen your knowledge and refine your teaching skills. Rooted in ancient wisdom and taught by experienced masters in Rishikesh.",
         syllabus: `
           <ul>
             <li>• Comprehensive Multi-Style Asana Mastery (200+ poses)</li>
@@ -204,7 +204,7 @@ export function AdminPanel() {
         deposit: 45000,
         accreditation: "Yoga Alliance RYT 500 Certified",
         teacherId: "",
-        duration: "8 weeks | Level: Beginner to Advanced",
+        duration: "8 weeks | Level: Introductory to Advanced",
         image: "https://images.unsplash.com/photo-1609786323851-b247ac61f096?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXNoaWtlc2glMjB5b2dhJTIwYXNocmFtfGVufDF8fHx8MTc2MjEwMTI4OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       }
     ];
@@ -244,7 +244,7 @@ export function AdminPanel() {
         sanskritName: "सूर्य नमस्कार",
         description: "Sun Salutation - A dynamic sequence of 12 poses to warm up the body and energize the spirit",
         benefits: ["Warms up entire body", "Improves flexibility", "Boosts energy", "Increases circulation"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Flow",
         image: "https://images.unsplash.com/photo-1606663368493-131f4f97c095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW4lMjBzYWx1dGF0aW9uJTIweW9nYXxlbnwxfHx8fDE3NjIwMzM3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -253,7 +253,7 @@ export function AdminPanel() {
         sanskritName: "अधो मुख श्वानासन",
         description: "Downward Facing Dog - A foundational pose that strengthens and stretches the entire body",
         benefits: ["Strengthens arms and legs", "Stretches hamstrings", "Energizes body", "Relieves back pain"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Standing",
         image: "https://images.unsplash.com/photo-1632167759227-80bdfe5bfbf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb3dud2FyZCUyMGRvZyUyMHlvZ2F8ZW58MXx8fHwxNzYyMDMzNzEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -262,7 +262,7 @@ export function AdminPanel() {
         sanskritName: "वृक्षासन",
         description: "Tree Pose - A balancing pose that develops focus, stability and inner calm",
         benefits: ["Improves balance", "Strengthens legs", "Enhances concentration", "Calms the mind"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Balance",
         image: "https://images.unsplash.com/photo-1635366400548-05fefa95193b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmVlJTIwcG9zZSUyMHlvZ2F8ZW58MXx8fHwxNzYyMDMzNzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -271,7 +271,7 @@ export function AdminPanel() {
         sanskritName: "वीरभद्रासन I",
         description: "Warrior I Pose - A powerful standing pose that builds strength and stamina",
         benefits: ["Strengthens legs and core", "Opens hips and chest", "Improves focus", "Builds confidence"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Standing",
         image: "https://images.unsplash.com/photo-1561577732-12fffa81b37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJyaW9yJTIwcG9zZSUyMHlvZ2F8ZW58MXx8fHwxNzYyMDMzNzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -280,7 +280,7 @@ export function AdminPanel() {
         sanskritName: "त्रिकोणासन",
         description: "Triangle Pose - An essential standing pose that stretches and strengthens the entire body",
         benefits: ["Stretches legs and hips", "Strengthens core", "Improves digestion", "Reduces stress"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Standing",
         image: "https://images.unsplash.com/photo-1758599881359-a3f089f33502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmlhbmdsZSUyMHBvc2UlMjB5b2dhfGVufDF8fHx8MTc2MjAzMzcxNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -289,7 +289,7 @@ export function AdminPanel() {
         sanskritName: "बालासन",
         description: "Child's Pose - A restful pose that gently stretches the back and calms the nervous system",
         benefits: ["Relieves back pain", "Calms the mind", "Stretches hips", "Reduces stress and fatigue"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Restorative",
         image: "https://images.unsplash.com/photo-1658281381502-8f73b17b0253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMHBvc2UlMjB5b2dhfGVufDF8fHx8MTc2MjAyOTgxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -307,7 +307,7 @@ export function AdminPanel() {
         sanskritName: "भुजंगासन",
         description: "Cobra Pose - A gentle backbend that opens the chest and strengthens the spine",
         benefits: ["Strengthens spine", "Opens chest and lungs", "Stimulates abdominal organs", "Relieves stress"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Backbend",
         image: "https://images.unsplash.com/photo-1758274533768-ed163c8dc217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2JyYSUyMHBvc2UlMjB5b2dhfGVufDF8fHx8MTc2MjAzMzcxNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },
@@ -352,7 +352,7 @@ export function AdminPanel() {
         sanskritName: "पश्चिमोत्तानासन",
         description: "Seated Forward Bend - A calming pose that stretches the entire back of the body",
         benefits: ["Stretches spine", "Calms the mind", "Relieves stress", "Improves digestion"],
-        difficulty: "Beginner",
+        difficulty: "Introductory",
         category: "Forward Fold",
         image: "https://images.unsplash.com/photo-1758599879178-e5be0375dee9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWF0ZWQlMjBmb3J3YXJkJTIwYmVuZHxlbnwxfHx8fDE3NjIwMzM3MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       },

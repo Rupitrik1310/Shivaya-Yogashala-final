@@ -32,7 +32,7 @@ const staticGoogleReviews: GoogleReview[] = [
     id: "review-ananya-patel",
     name: "Ananya Patel",
     country: "Bangalore, India",
-    text: "I came as a complete beginner and left as a confident yoga teacher. The 200hr Multistyle YTT course is comprehensive and covers everything from asanas to philosophy beautifully.",
+    text: "I arrived with introductory experience and left as a confident yoga teacher. The 200hr Multistyle YTT course is comprehensive and covers everything from asanas to philosophy beautifully.",
     rating: 5,
   },
 ];

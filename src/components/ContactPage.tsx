@@ -78,7 +78,7 @@ export function ContactPage() {
 
       const data = await response.json();
       if (data.success && data.courses) {
-        setCourses(data.courses);
+        setCourses(mergeContactCourses(data.courses));
       } else {
         // Use fallback courses if API doesn't return expected format
         setCourses(getFallbackCourses());
@@ -107,7 +107,35 @@ export function ContactPage() {
         id: "4",
         title: "500 Hour Multi-style Yoga Teacher Training",
       },
+      {
+        id: "5",
+        title: "100 Hour Yoga TTC",
+      },
+      {
+        id: "6",
+        title: "Aerial Yoga TTC",
+      },
+      {
+        id: "7",
+        title: "Sound Healing TTC",
+      },
     ];
+  };
+
+  const mergeContactCourses = (remoteCourses: Course[]) => {
+    const coursesByTitle = new Map<string, Course>();
+
+    [...remoteCourses, ...getFallbackCourses()].forEach((course) => {
+      const key = course.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+      if (!coursesByTitle.has(key)) {
+        coursesByTitle.set(key, course);
+      }
+    });
+
+    return Array.from(coursesByTitle.values());
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -552,11 +580,11 @@ export function ContactPage() {
                             <SelectValue placeholder="Select your experience level" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="Complete Beginner">
-                              Complete Beginner (0-6 months)
+                            <SelectItem value="Complete Introductory">
+                              Complete Introductory (0-6 months)
                             </SelectItem>
-                            <SelectItem value="Beginner">
-                              Beginner (6 months - 1 year)
+                            <SelectItem value="Introductory">
+                              Introductory (6 months - 1 year)
                             </SelectItem>
                             <SelectItem value="Intermediate">
                               Intermediate (1-3 years)

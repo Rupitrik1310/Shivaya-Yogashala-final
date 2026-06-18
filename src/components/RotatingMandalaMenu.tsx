@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Home, Users, BookOpen, Video, Send } from 'lucide-react';
+import { X, Home, Users, BookOpen, GalleryHorizontal, Send } from 'lucide-react';
 
 interface RotatingMandalaMenuProps {
   isOpen: boolean;
@@ -11,9 +11,9 @@ interface RotatingMandalaMenuProps {
 const menuItems = [
   { id: 'home', label: 'Home', icon: Home },
   { id: 'about', label: 'About Us', icon: Users },
-  { id: 'courses', label: 'Courses & TTC', icon: BookOpen },
-  { id: 'videos', label: 'Asana Library', icon: Video },
-  { id: 'contact', label: 'Talk to Yoga Mentor', icon: Send },
+  { id: 'courses', label: 'Courses', icon: BookOpen },
+  { id: 'gallery', label: 'Gallery', icon: GalleryHorizontal },
+  { id: 'apply-now', label: 'Apply Now', icon: Send },
 ];
 
 export function RotatingMandalaMenu({ 

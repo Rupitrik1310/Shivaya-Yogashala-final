@@ -17,7 +17,6 @@ import {
   Flower2,
   BookOpen,
   Sun,
-  Moon,
   Flame
 } from "lucide-react";
 
@@ -40,7 +39,7 @@ function AboutPage() {
       experience: "10+ years",
       photo: yogiRahul,
       bio:
-        "Yogi Rahul Ji is a young yoga master with a unique ability to attract learners through his dynamic teaching style. He began his yoga journey at a young age at Ganga Darshan Vishwa Yogapeeth (BSY). His yogic path has been shaped through extensive study and practice under many renowned Gurus from different yoga ashrams and schools across India. Professionally qualified with multiple certifications and yoga courses, he teaches 200-hour, 300-hour, and 500-hour Yoga Teacher Training programs. He strongly encourages students in the practice of Ashtanga Yoga, inspiring them deeply on their yogic journey.",
+        "Yogi Rahul Ji is a young yoga master with a unique ability to attract learners through his dynamic teaching style. He began his yoga journey at a young age at Ganga Darshan Vishwa Yogapeeth (BSY), Bihar. His yogic path has been shaped through extensive study and practice under many renowned Gurus from different yoga ashrams and schools across India. Professionally qualified with multiple certifications and yoga courses, he teaches 200-hour, 300-hour, and 500-hour Yoga Teacher Training programs. He strongly encourages students in the practice of Ashtanga Yoga, inspiring them deeply on their yogic journey.",
       specialization: ["Founder", "Ashtanga Yoga", "Pranayama"],
       certifications: [],
     },
@@ -101,9 +100,22 @@ function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card>
               <CardContent className="p-8 space-y-4">
-                <h3 className="text-primary">Rishikesh - The Yoga Capital</h3>
+                <h3 className="text-primary">Why Rishikesh - the Yoga Capital</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Rishikesh is revered worldwide as the birthplace of yoga, where ancient sages meditated along the holy banks of Ganga. This sacred land has been blessed by countless spiritual masters and remains a pilgrimage destination for yoga seekers from across the globe. The very air vibrates with spiritual energy, making it the perfect environment for deep yogic practice and self-realization.
+                  Rishikesh is known as the “Yoga Capital of the World” because it has been a center of yoga, meditation, and spiritual learning for thousands of years. Located on the banks of the sacred Ganga River in the foothills of the Himalayas, Rishikesh offers a peaceful environment that supports inner growth and self-discovery.
+                </p>
+
+                <h4 className="text-primary mt-4">Why Rishikesh Became the Yoga Capital</h4>
+                <ul className="list-disc list-inside text-muted-foreground leading-relaxed space-y-2">
+                  <li>Ancient sages and yogis practiced meditation here for centuries.</li>
+                  <li>The calm atmosphere, fresh mountain air, and spiritual energy make it ideal for yoga practice.</li>
+                  <li>Hundreds of yoga schools and teacher training programs attract students from all over the world.</li>
+                  <li>Traditional teachings of Hatha Yoga, Ashtanga Yoga, Pranayama, Meditation, and Yoga Philosophy are still preserved.</li>
+                  <li>The city’s spiritual culture encourages a yogic lifestyle based on simplicity, discipline, and self-awareness.</li>
+                </ul>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  People do not come to Rishikesh only to learn yoga postures. They come to experience a way of life. The sound of the flowing Ganga, the presence of ancient temples and ashrams, daily meditation, and the spiritual atmosphere help students connect with themselves beyond the physical practice of yoga.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Upper Tapovan, where our yogashala resides, offers a serene retreat away from the bustling town center while remaining easily accessible. Surrounded by lush greenery and panoramic mountain views, our location provides the ideal atmosphere for introspective study and spiritual growth.
@@ -113,12 +125,12 @@ function AboutPage() {
 
             <Card>
               <CardContent className="p-8 space-y-4">
-                <h3 className="text-secondary">Rooted in Shaivism</h3>
+                <h3 className="text-secondary">In the Footsteps of Adiyogi</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Shivaya Yogashala draws its spiritual foundation from Shaivism—the ancient tradition honoring Lord Shiva as the Adi Yogi (first yogi) and supreme consciousness. Our teachings emphasize the principles of transformation, self-discipline, and the dissolution of ego through dedicated practice. The Shaivite philosophy permeates every aspect of our curriculum, from asana practice to meditation techniques.
+                  Lord Shiva is revered as Adiyogi, the First Yogi, who shared the science of yoga with humanity. It is believed that on the banks of a Himalayan lake, Shiva transmitted the wisdom of yoga to the seven sages (Saptarishis), who carried these teachings across the world. Yoga is therefore not just a physical practice but a path of self-transformation inspired by Shiva’s qualities of stillness, awareness, balance, and inner freedom.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  We incorporate sacred mantras, ritualistic practices, and philosophical teachings from the Shiva Sutras and Vigyan Bhairav Tantra, offering students a holistic understanding of yoga as a complete lifestyle rather than mere physical exercise.
+                  Rishikesh, nestled in the Himalayan foothills and blessed by the sacred Ganga, reflects this spirit of Adiyogi. Many seekers come here to deepen their practice, seeking the same inner peace and higher consciousness that Lord Shiva symbolizes. Through asana, pranayama, meditation, and self-discipline, yoga guides practitioners toward harmony between body, mind, and soul, following the timeless wisdom associated with Lord Shiva. 
                 </p>
               </CardContent>
             </Card>
@@ -201,7 +213,7 @@ function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <Sun className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h2 className="text-primary mb-4">Ashram Life & Daily Rhythm</h2>
+              <h2 className="text-primary mb-4">Ashram Life & Facilities</h2>
               <div className="w-24 h-1 bg-secondary mx-auto" />
             </motion.div>
           </div>
@@ -211,34 +223,8 @@ function AboutPage() {
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-primary">Authentic Yogic Living</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Life at Shivaya Yogashala follows the traditional ashram discipline, beginning with early morning meditation and pranayama as the sun rises over the Himalayas. Our daily schedule is thoughtfully designed to balance intensive study, self-practice, rest, and reflection. The structured routine cultivates discipline, purifies the mind, and allows students to fully immerse themselves in the yogic path.
+                  Life at Shivaya Yogashala follows traditional ashram discipline with space for focused study, self-practice, rest, and reflection. The environment is designed to cultivate clarity, steadiness, and full immersion in the yogic path.
                 </p>
-                <div className="grid md:grid-cols-2 gap-6 pt-4">
-                  <div>
-                    <h4 className="text-primary mb-3 flex items-center gap-2">
-                      <Sun className="w-5 h-5" />
-                      Morning Sadhana
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• 6:00 AM - Pranayama & Meditation</li>
-                      <li>• 7:30 AM - Hatha/Ashtanga Practice</li>
-                      <li>• 9:00 AM - Sattvic Breakfast</li>
-                      <li>• 10:00 AM - Philosophy & Theory</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-primary mb-3 flex items-center gap-2">
-                      <Moon className="w-5 h-5" />
-                      Evening Practice
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• 4:00 PM - Alignment & Teaching Practice</li>
-                      <li>• 6:00 PM - Meditation & Mantra Chanting</li>
-                      <li>• 7:30 PM - Sattvic Dinner</li>
-                      <li>• 9:00 PM - Self-study & Rest</li>
-                    </ul>
-                  </div>
-                </div>
               </CardContent>
             </Card>
 

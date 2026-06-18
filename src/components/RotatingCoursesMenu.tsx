@@ -113,9 +113,9 @@ export function RotatingCoursesMenu({ courses, onNavigate }: RotatingCoursesMenu
                     <div className="flex justify-center pt-2">
                       <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary text-xs rounded-full border border-primary/20">
                         <Sparkles className="w-3 h-3" />
-                        {activeCourse.title.includes('200') ? 'Beginner Level' : 
+                        {activeCourse.title.includes('200') ? 'Introductory Level' : 
                          activeCourse.title.includes('300') ? 'Intermediate Level' : 
-                         activeCourse.title.includes('500') ? 'Advanced Level' : 
+                         activeCourse.title.includes('500') ? 'Introductory to Advanced' : 
                          'All Levels'}
                       </span>
                     </div>

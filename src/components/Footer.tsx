@@ -103,10 +103,18 @@ export function Footer({ onTabChange }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation("videos")}
+                  onClick={() => handleNavigation("gallery")}
                   className="hover:text-secondary transition-colors text-left"
                 >
-                  Asana Library
+                  Gallery
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("apply-now")}
+                  className="hover:text-secondary transition-colors text-left"
+                >
+                  Apply Now
                 </button>
               </li>
             </ul>
@@ -118,7 +126,7 @@ export function Footer({ onTabChange }: FooterProps) {
             <ul className="space-y-2 text-sm text-ash-grey">
               <li>
                 <button
-                  onClick={() => handleNavigation("courses")}
+                  onClick={() => handleNavigation("yoga-retreat")}
                   className="hover:text-secondary transition-colors text-left"
                 >
                   Yoga Retreat in Rishikesh
@@ -126,7 +134,15 @@ export function Footer({ onTabChange }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation("courses")}
+                  onClick={() => handleNavigation("100-hour-yoga-ttc")}
+                  className="hover:text-secondary transition-colors text-left"
+                >
+                  100 Hour Yoga TTC
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("200-hour-yoga-ttc")}
                   className="hover:text-secondary transition-colors text-left"
                 >
                   200 Hour Multi-style Yoga TTC
@@ -134,7 +150,7 @@ export function Footer({ onTabChange }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation("courses")}
+                  onClick={() => handleNavigation("300-hour-yoga-ttc")}
                   className="hover:text-secondary transition-colors text-left"
                 >
                   300 Hour Multi-style Yoga TTC
@@ -142,10 +158,26 @@ export function Footer({ onTabChange }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation("courses")}
+                  onClick={() => handleNavigation("500-hour-yoga-ttc")}
                   className="hover:text-secondary transition-colors text-left"
                 >
                   500 Hour Multi-style Yoga TTC
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("aerial-yoga-ttc")}
+                  className="hover:text-secondary transition-colors text-left"
+                >
+                  Aerial Yoga TTC
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("sound-healing-ttc")}
+                  className="hover:text-secondary transition-colors text-left"
+                >
+                  Sound Healing TTC
                 </button>
               </li>
             </ul>

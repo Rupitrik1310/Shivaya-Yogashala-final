@@ -4072,3 +4072,2554 @@ html {
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
 }
+
+.site-top-strip {
+  background: linear-gradient(90deg, var(--charcoal), #1e3a4a 52%, var(--primary));
+  color: var(--off-white);
+  font-size: .8125rem;
+}
+
+.site-top-strip-inner {
+  min-height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem 1.25rem;
+  flex-wrap: wrap;
+  padding: .35rem 0;
+}
+
+.site-top-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  white-space: nowrap;
+}
+
+.site-top-strip-link {
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.site-top-strip-link:hover {
+  color: var(--secondary);
+}
+
+.home-gallery-section {
+  background: linear-gradient(180deg, #fff 0%, color-mix(in oklab, var(--primary) 6%, #fff) 100%);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.home-gallery-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.home-gallery-header p {
+  color: var(--muted-foreground);
+  max-width: 34rem;
+}
+
+.home-gallery-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--secondary);
+  font-size: .875rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.home-gallery-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-gallery-stage {
+  position: relative;
+  min-height: 22rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: .5rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 20%, transparent);
+  background: var(--charcoal);
+  box-shadow: 0 24px 70px rgb(43 45 66 / 18%);
+}
+
+.home-gallery-slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-gallery-slide.is-active {
+  pointer-events: auto;
+}
+
+.home-gallery-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background: linear-gradient(0deg, rgb(43 45 66 / 82%), transparent);
+  pointer-events: none;
+}
+
+.home-gallery-caption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.home-gallery-controls {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 3;
+  display: flex;
+  gap: .5rem;
+}
+
+.home-gallery-controls button,
+.home-gallery-thumbnails button {
+  border: 1px solid rgb(255 255 255 / 65%);
+  background: rgb(255 255 255 / 88%);
+  color: var(--charcoal);
+  border-radius: .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.home-gallery-controls button {
+  width: 2.5rem;
+  height: 2.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.home-gallery-controls button:hover,
+.home-gallery-thumbnails button:hover,
+.home-gallery-thumbnails button.is-active {
+  transform: translateY(-1px);
+  border-color: var(--secondary);
+  background: #fff;
+}
+
+.home-gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.home-gallery-thumbnails button {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  padding: 0;
+  border-color: color-mix(in oklab, var(--primary) 18%, transparent);
+}
+
+.home-gallery-thumbnails button.is-active {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--secondary) 30%, transparent);
+}
+
+.courses-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 4rem 0 3.5rem;
+  background:
+    linear-gradient(135deg, color-mix(in oklab, var(--primary) 10%, #fff), #fff 52%, color-mix(in oklab, var(--secondary) 13%, #fff));
+}
+
+.courses-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: .42;
+  background:
+    repeating-linear-gradient(90deg, color-mix(in oklab, var(--primary) 16%, transparent) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(0deg, color-mix(in oklab, var(--secondary) 14%, transparent) 0 1px, transparent 1px 48px);
+  mask-image: linear-gradient(180deg, #000, transparent 82%);
+  pointer-events: none;
+}
+
+.courses-hero-logo {
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 18px 34px rgb(10 147 150 / 24%));
+}
+
+.courses-hero h1 {
+  max-width: 58rem;
+  margin: 0 auto 1rem;
+}
+
+.courses-hero p {
+  max-width: 42rem;
+  margin: 0 auto;
+  color: var(--muted-foreground);
+}
+
+.courses-hero-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+.courses-hero-pills span {
+  border: 1px solid color-mix(in oklab, var(--primary) 20%, transparent);
+  background: rgb(255 255 255 / 72%);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: .45rem .8rem;
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.courses-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0 5rem;
+  background:
+    linear-gradient(180deg, #fff 0%, color-mix(in oklab, var(--primary) 5%, #fff) 45%, #fff 100%);
+}
+
+.courses-mandala-device {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  margin: 0 auto 2.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.courses-mandala-device span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed color-mix(in oklab, var(--primary) 35%, transparent);
+  animation: courses-ring-spin 22s linear infinite;
+}
+
+.courses-mandala-device::after {
+  content: "";
+  position: absolute;
+  inset: .85rem;
+  border-radius: 50%;
+  border: 2px dotted color-mix(in oklab, var(--secondary) 48%, transparent);
+  animation: courses-ring-spin 16s linear infinite reverse;
+}
+
+.courses-mandala-device img {
+  width: 4.75rem;
+  height: 4.75rem;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes courses-ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.courses-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.course-feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--primary) 18%, transparent);
+  border-radius: .5rem;
+  background: #fff;
+  box-shadow: 0 16px 44px rgb(43 45 66 / 10%);
+  cursor: pointer;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.course-feature-card:hover,
+.course-feature-card.is-open {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--secondary) 55%, var(--primary));
+  box-shadow: 0 22px 60px rgb(43 45 66 / 15%);
+}
+
+.course-feature-media {
+  position: relative;
+  min-height: 15rem;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.course-feature-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgb(43 45 66 / 24%));
+  pointer-events: none;
+}
+
+.course-feature-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.course-feature-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.course-feature-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  color: var(--primary);
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.course-feature-topline span {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 18%, transparent);
+  border-radius: 999px;
+  padding: .32rem .6rem;
+  background: color-mix(in oklab, var(--primary) 5%, #fff);
+}
+
+.course-feature-content h3 {
+  color: var(--primary);
+  line-height: 1.25;
+}
+
+.course-feature-content p {
+  color: var(--muted-foreground);
+  font-size: .925rem;
+}
+
+.course-feature-price {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.course-feature-details {
+  overflow: hidden;
+}
+
+.course-feature-details > div {
+  display: flex;
+  gap: .65rem;
+  align-items: flex-start;
+  border-top: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+  padding-top: .9rem;
+}
+
+.course-feature-details svg {
+  color: var(--primary);
+  flex: 0 0 auto;
+  margin-top: .15rem;
+}
+
+.course-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding-top: .25rem;
+}
+
+@media (width >= 48rem) {
+  .home-gallery-header {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
+  }
+
+  .home-gallery-layout {
+    grid-template-columns: minmax(0, 1fr) 7rem;
+  }
+
+  .home-gallery-thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-hero {
+    padding: 5rem 0 4.5rem;
+  }
+
+  .course-feature-card {
+    grid-template-columns: minmax(17rem, 22rem) minmax(0, 1fr);
+  }
+
+  .course-feature-content {
+    padding: 1.75rem;
+  }
+}
+
+@media (width <= 640px) {
+  .site-top-strip-item:nth-child(2),
+  .site-top-strip-item:nth-child(4) {
+    display: none;
+  }
+
+  .home-gallery-section,
+  .courses-showcase {
+    padding: 3.5rem 0;
+  }
+
+  .home-gallery-stage {
+    min-height: 18rem;
+    aspect-ratio: 4 / 5;
+  }
+
+  .course-feature-actions > * {
+    flex: 1 1 100%;
+  }
+}
+
+.spiritual-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2.75rem 0 2rem;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7fbfa 42%, #fff8eb 100%);
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 12%, transparent);
+}
+
+.spiritual-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in oklab, var(--secondary) 8%, transparent) 1px, transparent 1px);
+  background-size: 5.5rem 5.5rem;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+}
+
+.spiritual-hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0 18%, color-mix(in oklab, var(--primary) 8%, transparent) 18% 18.4%, transparent 18.4% 100%),
+    linear-gradient(300deg, transparent 0 24%, color-mix(in oklab, var(--secondary) 10%, transparent) 24% 24.35%, transparent 24.35% 100%);
+}
+
+.spiritual-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.spiritual-hero-copy {
+  max-width: 45rem;
+}
+
+.spiritual-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  padding: .45rem .8rem;
+  border: 1px solid color-mix(in oklab, var(--secondary) 38%, transparent);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--charcoal);
+  box-shadow: 0 10px 24px rgb(43 45 66 / 7%);
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.spiritual-hero-kicker svg {
+  color: var(--secondary);
+}
+
+.spiritual-hero h1 {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 3rem;
+  line-height: 1.04;
+  letter-spacing: 0;
+  max-width: 44rem;
+}
+
+.spiritual-hero-copy > p {
+  margin-top: .9rem;
+  max-width: 39rem;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.spiritual-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 1.2rem;
+}
+
+.spiritual-hero-actions .inline-flex {
+  border-radius: .5rem;
+  min-height: 3rem;
+}
+
+.spiritual-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  max-width: 34rem;
+  margin-top: 1.15rem;
+}
+
+.spiritual-hero-stats div {
+  padding: .68rem .75rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 78%);
+  box-shadow: 0 12px 30px rgb(43 45 66 / 7%);
+}
+
+.spiritual-hero-stats strong,
+.spiritual-hero-stats span {
+  display: block;
+}
+
+.spiritual-hero-stats strong {
+  color: var(--primary);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.spiritual-hero-stats span {
+  margin-top: .2rem;
+  color: var(--muted-foreground);
+  font-size: .8rem;
+}
+
+.spiritual-hero-visual {
+  position: relative;
+  min-height: 24rem;
+}
+
+.spiritual-hero-orbit {
+  position: absolute;
+  inset: 7% 7% 3% 10%;
+  border: 1px solid color-mix(in oklab, var(--primary) 26%, transparent);
+  border-radius: 50%;
+  transform: rotate(-9deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spiritual-hero-orbit::before,
+.spiritual-hero-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 1.1rem;
+  border: 1px dashed color-mix(in oklab, var(--secondary) 42%, transparent);
+  border-radius: 50%;
+}
+
+.spiritual-hero-orbit::after {
+  inset: 2.45rem;
+  border-style: dotted;
+  border-color: color-mix(in oklab, var(--primary) 28%, transparent);
+}
+
+.spiritual-hero-logo-card {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  max-width: 15rem;
+  padding: .75rem .9rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 18px 42px rgb(43 45 66 / 12%);
+  backdrop-filter: blur(12px);
+}
+
+.spiritual-hero-logo-card img {
+  width: 3.1rem;
+  height: 3.1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgb(10 147 150 / 18%));
+}
+
+.spiritual-hero-logo-card span {
+  color: var(--charcoal);
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.spiritual-hero-photo {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 1.5rem; /* rounded-3xl feel */
+  background: transparent; /* no dark filler background */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 28px 60px rgb(16 24 40 / 12%); /* lightweight, elegant */
+  transform-origin: center center;
+  /* allow per-element rotation and float via CSS variables */
+  /* rotation plus optional per-image translate to expose overlaps */
+  transform: rotate(var(--rotate, 0deg)) translate(var(--tx, 0px), var(--ty, 0px));
+  animation: heroFloat 6s ease-in-out infinite;
+  z-index: 60; /* ensure photos float above decorative elements */
+}
+
+.spiritual-hero-photo-main {
+  right: 6%;
+  bottom: 0;
+  width: min(64%, 28rem);
+  max-width: 36rem;
+  /* no fixed aspect ratio or fixed height */
+}
+
+.spiritual-hero-photo-small {
+  left: 4%;
+  bottom: 10%;
+  width: min(42%, 16rem);
+  max-width: 22rem;
+}
+
+/* Floating keyframes that keep rotation while translating Y */
+@keyframes heroFloat {
+  0% {
+    transform: rotate(var(--rotate, 0deg)) translate(var(--tx, 0px), var(--ty, 0px));
+  }
+  50% {
+    transform: rotate(var(--rotate, 0deg)) translate(var(--tx, 0px), calc(var(--ty, 0px) - 6px));
+  }
+  100% {
+    transform: rotate(var(--rotate, 0deg)) translate(var(--tx, 0px), var(--ty, 0px));
+  }
+}
+
+.spiritual-hero-note {
+  position: absolute;
+  right: 3%;
+  top: 18%;
+  z-index: 5;
+  max-width: 10rem;
+  color: var(--charcoal);
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 1.05rem;
+  line-height: 1.18;
+  transform: rotate(8deg);
+}
+
+.spiritual-hero-note::after {
+  content: "";
+  display: block;
+  width: 4.75rem;
+  height: 2.5rem;
+  margin-top: .25rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-radius: 0 0 3rem 0;
+  transform: rotate(22deg);
+}
+
+.spiritual-hero-certifications {
+  margin-top: .8rem;
+  padding: .55rem .8rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 70%);
+  box-shadow: 0 16px 40px rgb(43 45 66 / 7%);
+  backdrop-filter: blur(12px);
+}
+
+.spiritual-hero-certifications > .space-y-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.spiritual-hero-certifications > .space-y-8 > * {
+  margin-block: 0 !important;
+}
+
+.spiritual-hero-certifications > .space-y-8 > .text-center {
+  text-align: left;
+  flex: 0 1 17rem;
+}
+
+.spiritual-hero-certifications h3 {
+  margin-bottom: .4rem;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.spiritual-hero-certifications h3 br {
+  display: none;
+}
+
+.spiritual-hero-certifications h3 span {
+  margin-top: 0;
+  margin-left: .35rem;
+  font-size: .78rem;
+}
+
+.spiritual-hero-certifications .w-32.h-32,
+.spiritual-hero-certifications .md\:w-40.md\:h-40 {
+  width: 3.3rem;
+  height: 3.3rem;
+}
+
+.spiritual-hero-certifications .flex.flex-wrap.justify-center {
+  gap: 1rem;
+  padding: 0;
+}
+
+.spiritual-hero-certifications .relative.group.flex.flex-col.items-center {
+  display: grid;
+  grid-template-columns: 3.3rem minmax(6rem, 8rem);
+  align-items: center;
+  gap: .5rem;
+}
+
+.spiritual-hero-certifications .text-center.mt-4 {
+  margin-top: 0;
+  text-align: left;
+}
+
+.spiritual-hero-certifications .tracking-wide {
+  letter-spacing: 0;
+}
+
+.spiritual-hero-certifications .text-xs {
+  display: none;
+}
+
+.home-principles-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #fff 0%, color-mix(in oklab, var(--primary) 5%, #fff) 100%);
+}
+
+.home-principles-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 4.5rem, color-mix(in oklab, var(--secondary) 8%, transparent) 4.5rem calc(4.5rem + 1px)),
+    repeating-linear-gradient(0deg, transparent 0 4.5rem, color-mix(in oklab, var(--primary) 7%, transparent) 4.5rem calc(4.5rem + 1px));
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 72%, transparent);
+}
+
+.home-principles-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.certification-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.certification-logo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: transparent;
+  border: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 18px 42px rgb(43 45 66 / 8%);
+}
+
+.certification-logo-button:hover,
+.certification-logo-button:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 64px rgb(43 45 66 / 12%);
+}
+
+.certification-logo-image {
+  width: 100%;
+  max-width: 14rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.certification-accordion {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.certification-accordion-item {
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 22px 60px rgb(43 45 66 / 10%);
+}
+
+.certification-accordion-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.certification-panel {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.75rem;
+  transition: max-height .35s ease, padding .35s ease;
+}
+
+.certification-panel.is-open {
+  max-height: 12rem;
+  padding: 0 1.75rem 1.5rem;
+}
+
+.certification-panel p {
+  margin: 0;
+  line-height: 1.9;
+  color: var(--muted-foreground);
+}
+
+.home-course-section {
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--primary) 5%, #fff) 0%, #fff 44%, color-mix(in oklab, var(--secondary) 7%, #fff) 100%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.home-course-section .max-w-6xl > div > .overflow-hidden {
+  border-radius: .75rem;
+  background: rgb(255 255 255 / 95%);
+  box-shadow: 0 20px 60px rgb(43 45 66 / 12%);
+}
+
+.home-course-section .max-w-6xl > div > .overflow-hidden:hover {
+  box-shadow: 0 24px 72px rgb(43 45 66 / 16%);
+}
+
+.home-principles-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 4.5rem, color-mix(in oklab, var(--secondary) 8%, transparent) 4.5rem calc(4.5rem + 1px)),
+    repeating-linear-gradient(0deg, transparent 0 4.5rem, color-mix(in oklab, var(--primary) 7%, transparent) 4.5rem calc(4.5rem + 1px));
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 72%, transparent);
+}
+
+.home-principle-card {
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 16px 40px rgb(43 45 66 / 8%);
+  backdrop-filter: blur(10px);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.home-principle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 56px rgb(43 45 66 / 13%);
+}
+
+.home-gallery-reference {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 0 4.75rem;
+  background:
+    linear-gradient(180deg, #fbfaf6 0%, #ffffff 62%, color-mix(in oklab, var(--secondary) 6%, #fff) 100%);
+}
+
+.home-gallery-reference::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in oklab, var(--secondary) 7%, transparent) 1px, transparent 1px);
+  background-size: 6rem 6rem;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 84%, transparent 100%);
+  pointer-events: none;
+}
+
+.home-gallery-reference-shell {
+  position: relative;
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-gallery-reference-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .85rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--secondary) 30%, #fff);
+  color: var(--charcoal);
+  font-size: .9rem;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgb(233 168 59 / 18%);
+}
+
+.home-gallery-reference h2 {
+  max-width: 64rem;
+  margin: 1.25rem auto 0;
+  color: #10131f;
+  font-size: 3.75rem;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.home-gallery-reference p {
+  max-width: 40rem;
+  margin: 1.25rem auto 0;
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.gallery-hand-note {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: 8.75rem;
+  color: #10131f;
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 1rem;
+  line-height: 1.15;
+  pointer-events: none;
+}
+
+.gallery-hand-note-right {
+  top: 5.5rem;
+  right: 5%;
+  transform: rotate(12deg);
+}
+
+.gallery-hand-note-right::after {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 4rem;
+  margin-top: .25rem;
+  margin-left: .5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-radius: 0 0 4rem 0;
+  transform: rotate(21deg);
+}
+
+.gallery-hand-note-left {
+  left: 14%;
+  bottom: 1.2rem;
+  transform: rotate(-14deg);
+}
+
+.gallery-hand-note-left::before {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+  margin-bottom: .15rem;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-radius: 0 0 0 3rem;
+  transform: rotate(-18deg);
+}
+
+.home-gallery-arc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.55rem;
+  width: calc(100vw + 8rem);
+  min-height: 22.5rem;
+  margin: 2.5rem 0 0 50%;
+  padding: 1rem 2rem 2.5rem;
+  transform: translateX(-50%);
+}
+
+.home-gallery-arc-card {
+  position: relative;
+  flex: 0 0 12.4rem;
+  height: 18.5rem;
+  overflow: hidden;
+  padding: 0;
+  border: .35rem solid #fff;
+  border-radius: .5rem;
+  background: var(--charcoal);
+  box-shadow: 0 24px 60px rgb(43 45 66 / 17%);
+  cursor: pointer;
+  scale: 1;
+  transition: scale .24s ease, box-shadow .24s ease, border-color .24s ease, filter .24s ease;
+}
+
+.home-gallery-arc-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 58%, rgb(43 45 66 / 42%));
+  opacity: 0;
+  transition: opacity .24s ease;
+  pointer-events: none;
+}
+
+.home-gallery-arc-card:hover,
+.home-gallery-arc-card.is-active {
+  border-color: color-mix(in oklab, var(--secondary) 70%, #fff);
+  box-shadow: 0 30px 76px rgb(43 45 66 / 22%);
+  filter: saturate(1.05);
+  scale: 1.04;
+}
+
+.home-gallery-arc-card.is-active::after {
+  opacity: 1;
+}
+
+.home-gallery-reference-footer {
+  display: inline-grid;
+  grid-template-columns: 2.75rem minmax(13rem, 19rem) 2.75rem;
+  align-items: center;
+  gap: .8rem;
+  margin-top: .25rem;
+  padding: .55rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 15%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 18px 42px rgb(43 45 66 / 9%);
+}
+
+.home-gallery-reference-footer button {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklab, var(--primary) 20%, transparent);
+  border-radius: .5rem;
+  background: #fff;
+  color: var(--primary);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.home-gallery-reference-footer button:hover {
+  transform: translateY(-1px);
+  border-color: var(--secondary);
+  background: color-mix(in oklab, var(--secondary) 10%, #fff);
+}
+
+.home-gallery-reference-footer div {
+  display: grid;
+  gap: .1rem;
+}
+
+.home-gallery-reference-footer span {
+  color: var(--charcoal);
+  font-size: .92rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-gallery-reference-footer small {
+  color: var(--muted-foreground);
+  font-size: .75rem;
+}
+
+.home-course-section {
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--primary) 5%, #fff) 0%, #fff 44%, color-mix(in oklab, var(--secondary) 7%, #fff) 100%);
+}
+
+.home-course-section .max-w-6xl > div > .overflow-hidden {
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 18px 52px rgb(43 45 66 / 10%);
+}
+
+.home-course-section .max-w-6xl > div > .overflow-hidden:hover {
+  box-shadow: 0 24px 66px rgb(43 45 66 / 16%);
+}
+
+.home-sacred-section {
+  background:
+    linear-gradient(135deg, #ffffff 0%, color-mix(in oklab, var(--primary) 6%, #fff) 55%, #fff8ed 100%);
+}
+
+.home-sacred-section img {
+  border-radius: .5rem;
+}
+
+.home-sacred-section .space-y-4 > div {
+  border-color: color-mix(in oklab, var(--primary) 16%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 80%);
+  box-shadow: 0 14px 34px rgb(43 45 66 / 8%);
+}
+
+.home-reviews-section {
+  background:
+    linear-gradient(180deg, #fff 0%, color-mix(in oklab, var(--primary) 5%, #fff) 100%);
+}
+
+.home-reviews-section [class*="border-primary"] {
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 16px 42px rgb(43 45 66 / 8%);
+}
+
+.home-final-cta {
+  background:
+    linear-gradient(135deg, #173b44 0%, var(--primary) 48%, #d4892c 100%);
+}
+
+.home-final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 9%) 0 1px, transparent 1px 5.5rem),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 7%) 0 1px, transparent 1px 5.5rem);
+  mask-image: linear-gradient(180deg, #000, transparent 84%);
+  pointer-events: none;
+}
+
+@media (width >= 64rem) {
+  .spiritual-hero-grid {
+    grid-template-columns: minmax(0, .98fr) minmax(28rem, .82fr);
+  }
+}
+
+@media (width <= 1024px) {
+  .spiritual-hero h1,
+  .home-gallery-reference h2 {
+    font-size: 3rem;
+  }
+
+  .home-gallery-arc {
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 100%;
+    margin-left: 0;
+    padding-inline: 1.25rem;
+    transform: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .home-gallery-arc-card {
+    scroll-snap-align: center;
+  }
+
+  .gallery-hand-note-right {
+    right: 1rem;
+  }
+}
+
+@media (width <= 768px) {
+  .spiritual-hero {
+    padding: 4rem 0 3.25rem;
+  }
+
+  .spiritual-hero h1,
+  .home-gallery-reference h2 {
+    font-size: 2.35rem;
+    line-height: 1.1;
+  }
+
+  .spiritual-hero-copy > p,
+  .home-gallery-reference p {
+    font-size: 1rem;
+  }
+
+  .spiritual-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .spiritual-hero-visual {
+    min-height: 26rem;
+  }
+
+  .spiritual-hero-logo-card {
+    left: 0;
+  }
+
+  .spiritual-hero-photo-main {
+    width: 70%;
+    right: 0;
+  }
+
+  .spiritual-hero-photo-small {
+    width: 46%;
+    left: 0;
+  }
+
+  .spiritual-hero-note,
+  .gallery-hand-note {
+    display: none;
+  }
+
+  .home-gallery-reference {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .home-gallery-arc {
+    min-height: 20rem;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  .home-gallery-arc-card {
+    flex-basis: 10.5rem;
+    height: 16rem;
+  }
+}
+
+@media (width <= 520px) {
+  .spiritual-hero-actions .inline-flex {
+    width: 100%;
+  }
+
+  .spiritual-hero-visual {
+    min-height: 22rem;
+  }
+
+  .spiritual-hero-photo-main {
+    width: 76%;
+  }
+
+  .spiritual-hero-photo-small {
+    width: 48%;
+    bottom: 5%;
+  }
+
+  .home-gallery-reference-footer {
+    width: 100%;
+    grid-template-columns: 2.6rem minmax(0, 1fr) 2.6rem;
+  }
+}
+
+.course-detail-page {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.course-detail-empty {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fff, color-mix(in oklab, var(--primary) 7%, #fff));
+}
+
+.course-detail-empty p {
+  max-width: 32rem;
+  margin: 1rem auto 1.5rem;
+  color: var(--muted-foreground);
+}
+
+.course-detail-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 4.75rem 0 2.5rem;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7fbfa 48%, #fff7e8 100%);
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 12%, transparent);
+}
+
+.course-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in oklab, var(--secondary) 8%, transparent) 1px, transparent 1px);
+  background-size: 5.5rem 5.5rem;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 86%);
+}
+
+.course-detail-hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0 17%, color-mix(in oklab, var(--primary) 8%, transparent) 17% 17.35%, transparent 17.35% 100%),
+    linear-gradient(300deg, transparent 0 28%, color-mix(in oklab, var(--secondary) 10%, transparent) 28% 28.35%, transparent 28.35% 100%);
+}
+
+.course-detail-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.course-detail-hero-copy {
+  max-width: 47rem;
+}
+
+.course-detail-kicker,
+.course-detail-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--secondary) 27%, #fff);
+  color: var(--charcoal);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.course-detail-kicker {
+  margin-bottom: 1rem;
+  padding: .45rem .85rem;
+  border: 1px solid color-mix(in oklab, var(--secondary) 36%, transparent);
+  box-shadow: 0 12px 28px rgb(233 168 59 / 15%);
+}
+
+.course-detail-section-badge {
+  margin-bottom: 1rem;
+  padding: .4rem .75rem;
+  border: 1px solid color-mix(in oklab, var(--secondary) 28%, transparent);
+}
+
+.course-detail-kicker svg,
+.course-detail-section-badge svg {
+  color: var(--secondary);
+}
+
+.course-detail-hero h1 {
+  max-width: 48rem;
+  color: var(--charcoal);
+  font-size: 3.6rem;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.course-detail-hero-copy > p {
+  max-width: 42rem;
+  margin-top: 1rem;
+  color: var(--muted-foreground);
+  font-size: 1.075rem;
+  line-height: 1.75;
+}
+
+.course-detail-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 1.5rem;
+}
+
+.course-detail-hero-actions .inline-flex,
+.course-detail-apply .inline-flex {
+  border-radius: .5rem;
+}
+
+.course-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem;
+  max-width: 42rem;
+  margin-top: 1.5rem;
+}
+
+.course-detail-stats div {
+  min-height: 5.15rem;
+  padding: .8rem .9rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 80%);
+  box-shadow: 0 14px 34px rgb(43 45 66 / 7%);
+}
+
+.course-detail-stats span {
+  display: block;
+  color: var(--muted-foreground);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.course-detail-stats strong {
+  display: block;
+  margin-top: .24rem;
+  color: var(--primary);
+  line-height: 1.22;
+}
+
+.course-detail-hero-visual {
+  position: relative;
+  min-height: 30rem;
+}
+
+.course-detail-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 2.5rem 1rem 1rem 1.5rem;
+  border: 1px dashed color-mix(in oklab, var(--primary) 35%, transparent);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+
+.course-detail-hero-image {
+  position: absolute;
+  inset: 0 2rem 1rem 0;
+  overflow: hidden;
+  border: .42rem solid #fff;
+  border-radius: .5rem;
+  background: var(--charcoal);
+  box-shadow: 0 30px 80px rgb(43 45 66 / 18%);
+  transform: rotate(2deg);
+}
+
+.course-detail-price-note {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .25rem .8rem;
+  min-width: 15rem;
+  padding: .9rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 18px 44px rgb(43 45 66 / 13%);
+  backdrop-filter: blur(10px);
+}
+
+.course-detail-price-note span {
+  color: var(--muted-foreground);
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.course-detail-price-note strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.course-detail-badge {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  z-index: 3;
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  border: .3rem solid #fff;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 18px 42px rgb(43 45 66 / 14%);
+}
+
+.course-detail-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.course-detail-section-nav {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  overflow-x: auto;
+  margin-top: 2rem;
+  padding: .55rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 13%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 74%);
+  box-shadow: 0 16px 42px rgb(43 45 66 / 8%);
+  backdrop-filter: blur(12px);
+}
+
+.course-detail-section-nav a {
+  flex: 0 0 auto;
+  border-radius: .5rem;
+  color: var(--charcoal);
+  padding: .55rem .75rem;
+  font-size: .86rem;
+  font-weight: 700;
+  transition: background .2s ease, color .2s ease;
+}
+
+.course-detail-section-nav a:hover {
+  background: color-mix(in oklab, var(--primary) 10%, #fff);
+  color: var(--primary);
+}
+
+.course-detail-section {
+  scroll-margin-top: 8rem;
+  padding: 4.75rem 0;
+  background: #fff;
+}
+
+.course-detail-section-soft {
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--primary) 4%, #fff) 0%, #fff 58%, color-mix(in oklab, var(--secondary) 5%, #fff) 100%);
+}
+
+.course-detail-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.course-detail-two-column h2,
+.course-detail-section-heading h2,
+.course-detail-certification h2,
+.course-detail-apply h2 {
+  color: var(--charcoal);
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.course-detail-two-column p,
+.course-detail-section-heading p {
+  max-width: 42rem;
+  margin-top: .85rem;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.course-detail-highlight-card,
+.course-detail-info-list,
+.course-detail-certification,
+.course-detail-module,
+.course-detail-pricing-grid article,
+.course-detail-faq-list details {
+  border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 16px 40px rgb(43 45 66 / 8%);
+}
+
+.course-detail-highlight-card {
+  padding: 1.5rem;
+}
+
+.course-detail-highlight-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.course-detail-check-list {
+  display: grid;
+  gap: .8rem;
+}
+
+.course-detail-check-list div,
+.course-detail-info-list div {
+  display: flex;
+  gap: .65rem;
+  align-items: flex-start;
+  color: var(--charcoal);
+  line-height: 1.55;
+}
+
+.course-detail-check-list svg,
+.course-detail-info-list svg {
+  flex: 0 0 auto;
+  margin-top: .15rem;
+  color: var(--primary);
+}
+
+.course-detail-section-heading {
+  max-width: 48rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.course-detail-curriculum-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.course-detail-module {
+  padding: 1.25rem;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+
+.course-detail-module:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--secondary) 44%, var(--primary));
+  box-shadow: 0 22px 54px rgb(43 45 66 / 12%);
+}
+
+.course-detail-module span {
+  display: inline-flex;
+  width: 2.45rem;
+  height: 2.45rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  background: color-mix(in oklab, var(--primary) 11%, #fff);
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.course-detail-module h3 {
+  color: var(--charcoal);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.course-detail-timeline {
+  max-width: 56rem;
+  margin: 0 auto;
+  border-left: 2px solid color-mix(in oklab, var(--primary) 22%, transparent);
+}
+
+.course-detail-timeline article {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0 0 1.6rem 1.5rem;
+}
+
+.course-detail-timeline article::before {
+  content: "";
+  position: absolute;
+  left: -.43rem;
+  top: .25rem;
+  width: .78rem;
+  height: .78rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  box-shadow: 0 0 0 .35rem color-mix(in oklab, var(--secondary) 18%, transparent);
+}
+
+.course-detail-timeline time {
+  color: var(--primary);
+  font-size: .88rem;
+  font-weight: 800;
+}
+
+.course-detail-timeline h3 {
+  color: var(--charcoal);
+  font-size: 1.05rem;
+}
+
+.course-detail-timeline p {
+  margin-top: .25rem;
+  color: var(--muted-foreground);
+  line-height: 1.65;
+}
+
+.course-detail-accommodation-grid {
+  align-items: center;
+}
+
+.course-detail-info-list {
+  display: grid;
+  gap: .9rem;
+  padding: 1.5rem;
+}
+
+.course-detail-certification {
+  display: grid;
+  grid-template-columns: minmax(5rem, 7rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.course-detail-certification > img,
+.course-detail-certification > svg {
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: contain;
+  color: var(--primary);
+}
+
+.course-detail-pricing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.course-detail-pricing-grid article {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.course-detail-pricing-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: .28rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.course-detail-pricing-grid span {
+  display: block;
+  color: var(--muted-foreground);
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.course-detail-pricing-grid strong {
+  display: block;
+  margin-top: .45rem;
+  color: var(--primary);
+  font-size: 2.35rem;
+  line-height: 1.1;
+}
+
+.course-detail-pricing-grid p {
+  margin-top: .55rem;
+  color: var(--muted-foreground);
+}
+
+.course-detail-faq-list {
+  display: grid;
+  gap: .8rem;
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.course-detail-faq-list details {
+  padding: 1rem 1.15rem;
+}
+
+.course-detail-faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--charcoal);
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.course-detail-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-detail-faq-list summary svg {
+  flex: 0 0 auto;
+  color: var(--primary);
+  transition: transform .2s ease;
+}
+
+.course-detail-faq-list details[open] summary svg {
+  transform: rotate(90deg);
+}
+
+.course-detail-faq-list p {
+  margin-top: .85rem;
+  color: var(--muted-foreground);
+  line-height: 1.65;
+}
+
+.course-detail-apply {
+  position: relative;
+  overflow: hidden;
+  padding: 4.75rem 0;
+  background:
+    linear-gradient(135deg, #173b44 0%, var(--primary) 48%, #d4892c 100%);
+  color: #fff;
+}
+
+.course-detail-apply::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 9%) 0 1px, transparent 1px 5.5rem),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 7%) 0 1px, transparent 1px 5.5rem);
+  mask-image: linear-gradient(180deg, #000, transparent 84%);
+  pointer-events: none;
+}
+
+.course-detail-apply-card {
+  position: relative;
+  z-index: 1;
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-detail-apply .course-detail-section-badge {
+  background: rgb(255 255 255 / 92%);
+}
+
+.course-detail-apply h2 {
+  color: #fff;
+}
+
+.course-detail-apply p {
+  max-width: 40rem;
+  margin: 1rem auto 1.5rem;
+  color: rgb(255 255 255 / 86%);
+  line-height: 1.75;
+}
+
+.course-detail-apply-card > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .85rem;
+}
+
+@media (width >= 48rem) {
+  .course-detail-curriculum-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-detail-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 64rem) {
+  .course-detail-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(26rem, .78fr);
+  }
+
+  .course-detail-two-column {
+    grid-template-columns: minmax(0, .95fr) minmax(23rem, .72fr);
+  }
+
+  .course-detail-curriculum-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 768px) {
+  .course-detail-hero {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .course-detail-hero h1 {
+    font-size: 2.45rem;
+    line-height: 1.1;
+  }
+
+  .course-detail-hero-copy > p,
+  .course-detail-two-column p,
+  .course-detail-section-heading p {
+    font-size: 1rem;
+  }
+
+  .course-detail-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .course-detail-hero-visual {
+    min-height: 24rem;
+  }
+
+  .course-detail-hero-image {
+    inset: 0 0 2rem 0;
+  }
+
+  .course-detail-price-note {
+    left: .75rem;
+    right: .75rem;
+  }
+
+  .course-detail-badge {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .course-detail-section {
+    padding: 3.5rem 0;
+  }
+
+  .course-detail-section-heading {
+    text-align: left;
+  }
+
+  .course-detail-timeline {
+    border-left: 0;
+  }
+
+  .course-detail-timeline article {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1rem;
+    border: 1px solid color-mix(in oklab, var(--primary) 14%, transparent);
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 0 12px 30px rgb(43 45 66 / 7%);
+  }
+
+  .course-detail-timeline article + article {
+    margin-top: .85rem;
+  }
+
+  .course-detail-timeline article::before {
+    display: none;
+  }
+
+  .course-detail-certification {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width <= 520px) {
+  .course-detail-hero-actions .inline-flex,
+  .course-detail-apply .inline-flex {
+    width: 100%;
+  }
+
+  .course-detail-section-nav {
+    margin-inline: -1rem;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .course-detail-hero h1 {
+    font-size: 2.08rem;
+  }
+
+  .course-detail-hero-visual {
+    min-height: 21rem;
+  }
+
+  .course-detail-price-note {
+    grid-template-columns: 1fr;
+    gap: .15rem;
+  }
+
+  .course-detail-pricing-grid strong {
+    font-size: 2rem;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 20%, transparent);
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 14px 38px rgb(43 45 66 / 8%);
+  backdrop-filter: blur(18px);
+}
+
+.site-header-main {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.site-brand-logo {
+  width: 4.6rem;
+  height: 4.6rem;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgb(10 147 150 / 16%));
+}
+
+.site-brand-text {
+  display: grid;
+  gap: .05rem;
+  text-align: left;
+}
+
+.site-brand-text span {
+  color: var(--primary);
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: .95;
+}
+
+.site-brand-text small {
+  color: var(--muted-foreground);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .2rem;
+}
+
+.desktop-nav-group {
+  position: relative;
+}
+
+.desktop-nav-link {
+  display: inline-flex;
+  min-height: 2.65rem;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  padding: .62rem .78rem;
+  border-radius: .5rem;
+  color: var(--charcoal);
+  font-size: .91rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+  white-space: nowrap;
+}
+
+.desktop-nav-link:hover,
+.desktop-nav-link:focus-visible,
+.desktop-nav-link.is-active {
+  background: color-mix(in oklab, var(--primary) 10%, #fff);
+  color: var(--primary);
+}
+
+.desktop-nav-link.is-highlighted {
+  margin-left: .35rem;
+  padding-inline: 1rem;
+  background: linear-gradient(135deg, var(--primary), #087b7d);
+  color: #fff;
+  box-shadow: 0 16px 30px rgb(10 147 150 / 22%);
+}
+
+.desktop-nav-link.is-highlighted:hover,
+.desktop-nav-link.is-highlighted:focus-visible {
+  background: linear-gradient(135deg, #087b7d, var(--secondary));
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.desktop-dropdown {
+  position: absolute;
+  top: calc(100% + .55rem);
+  left: 0;
+  z-index: 60;
+  display: grid;
+  min-width: 17.5rem;
+  gap: .2rem;
+  padding: .55rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 18%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 24px 62px rgb(43 45 66 / 16%);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(.45rem);
+  transition: opacity .18s ease, transform .18s ease;
+  backdrop-filter: blur(16px);
+}
+
+.desktop-nav-group:hover .desktop-dropdown,
+.desktop-nav-group:focus-within .desktop-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.desktop-dropdown-link {
+  width: 100%;
+  padding: .68rem .75rem;
+  border-radius: .42rem;
+  color: var(--charcoal);
+  font-size: .9rem;
+  font-weight: 650;
+  text-align: left;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.desktop-dropdown-link:hover,
+.desktop-dropdown-link:focus-visible,
+.desktop-dropdown-link.is-active {
+  background: color-mix(in oklab, var(--secondary) 16%, #fff);
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+.mobile-menu-trigger {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 26px rgb(10 147 150 / 24%);
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgb(11 18 32 / 46%);
+  backdrop-filter: blur(5px);
+}
+
+.mobile-menu-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 101;
+  display: flex;
+  width: min(24rem, 92vw);
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 94%), rgb(245 243 238 / 94%)),
+    linear-gradient(135deg, color-mix(in oklab, var(--primary) 12%, transparent), color-mix(in oklab, var(--secondary) 12%, transparent));
+  box-shadow: -28px 0 70px rgb(43 45 66 / 22%);
+  backdrop-filter: blur(20px);
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 16%, transparent);
+}
+
+.mobile-menu-brand {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: .75rem;
+  text-align: left;
+}
+
+.mobile-menu-brand img {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.mobile-menu-brand span {
+  display: grid;
+  min-width: 0;
+}
+
+.mobile-menu-brand strong {
+  color: var(--charcoal);
+  font-size: .98rem;
+  line-height: 1.15;
+}
+
+.mobile-menu-brand small {
+  color: var(--muted-foreground);
+  font-size: .75rem;
+  line-height: 1.3;
+}
+
+.mobile-menu-close {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklab, var(--primary) 18%, transparent);
+  border-radius: .5rem;
+  background: #fff;
+  color: var(--primary);
+}
+
+.mobile-menu-nav {
+  display: grid;
+  gap: .55rem;
+  overflow-y: auto;
+  padding: .9rem;
+}
+
+.mobile-menu-link {
+  display: flex;
+  width: 100%;
+  min-height: 3.25rem;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem .85rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 12%, transparent);
+  border-radius: .5rem;
+  background: rgb(255 255 255 / 78%);
+  color: var(--charcoal);
+  font-size: .98rem;
+  font-weight: 750;
+  text-align: left;
+  box-shadow: 0 12px 28px rgb(43 45 66 / 6%);
+}
+
+.mobile-menu-link svg:last-child {
+  margin-left: auto;
+  transition: transform .2s ease;
+}
+
+.mobile-menu-link svg.is-rotated {
+  transform: rotate(180deg);
+}
+
+.mobile-menu-link.is-active {
+  border-color: color-mix(in oklab, var(--primary) 38%, transparent);
+  background: color-mix(in oklab, var(--primary) 10%, #fff);
+  color: var(--primary);
+}
+
+.mobile-menu-link.is-highlighted {
+  justify-content: center;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow: 0 18px 34px rgb(10 147 150 / 22%);
+}
+
+.mobile-submenu {
+  display: grid;
+  gap: .35rem;
+  margin: .45rem 0 .75rem;
+  padding: .5rem;
+  border-left: 2px solid color-mix(in oklab, var(--primary) 30%, transparent);
+}
+
+.mobile-submenu-link {
+  display: flex;
+  min-height: 2.8rem;
+  align-items: center;
+  gap: .55rem;
+  padding: .62rem .8rem;
+  border-radius: .45rem;
+  color: var(--muted-foreground);
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.mobile-submenu-link:hover,
+.mobile-submenu-link.is-active {
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  color: var(--primary);
+}
+
+.gallery-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1rem 4rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--primary) 12%, transparent);
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7fbfa 48%, #fff8eb 100%);
+  text-align: center;
+}
+
+.gallery-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in oklab, var(--secondary) 8%, transparent) 1px, transparent 1px);
+  background-size: 5rem 5rem;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 86%);
+  pointer-events: none;
+}
+
+.gallery-page-logo {
+  position: relative;
+  width: 5.75rem;
+  height: 5.75rem;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 20px rgb(10 147 150 / 18%));
+}
+
+.gallery-page-hero p {
+  position: relative;
+  margin: 0;
+  color: var(--secondary);
+  font-size: .88rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.gallery-page-hero h1 {
+  position: relative;
+  margin: .3rem 0 0;
+  color: var(--charcoal);
+  font-size: 3.4rem;
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.gallery-page-grid-section {
+  padding: 4rem 1rem 5rem;
+  background: #fff;
+}
+
+.gallery-page-grid {
+  display: grid;
+  max-width: 76rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery-page-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: .35rem solid #fff;
+  border-radius: .75rem;
+  background: #f7f5ef;
+  box-shadow: 0 22px 56px rgb(43 45 66 / 13%);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery-page-card:hover,
+.gallery-page-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 72px rgb(43 45 66 / 18%);
+}
+
+.gallery-page-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.gallery-page-card:hover .gallery-page-image,
+.gallery-page-card:focus-visible .gallery-page-image {
+  transform: scale(1.02);
+}
+
+.gallery-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(8, 15, 31, 0.85);
+}
+
+.gallery-lightbox-panel {
+  position: relative;
+  width: min(95vw, 88rem);
+  max-height: 95vh;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 32px 84px rgb(10 18 34 / 30%);
+  overflow: hidden;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: .75rem;
+  background: rgba(255, 255, 255, .92);
+  color: var(--charcoal);
+  box-shadow: 0 12px 28px rgb(43 45 66 / 14%);
+  cursor: pointer;
+}
+
+.gallery-lightbox-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: min(70vh, 42rem);
+}
+
+.gallery-lightbox-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: .75rem;
+  background: rgba(255, 255, 255, .92);
+  color: var(--charcoal);
+  box-shadow: 0 10px 24px rgb(43 45 66 / 12%);
+  cursor: pointer;
+}
+
+.gallery-lightbox-image-wrapper {
+  width: 100%;
+  max-height: 75vh;
+  display: grid;
+  gap: .85rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery-lightbox-image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 24px 64px rgb(43 45 66 / 18%);
+}
+
+.gallery-lightbox-caption {
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: .85rem;
+  background: rgba(255, 255, 255, .86);
+  color: var(--charcoal);
+  text-align: center;
+  font-size: .98rem;
+  line-height: 1.6;
+  box-shadow: inset 0 0 0 1px rgb(10 18 34 / 5%);
+}
+
+.gallery-page-grid {
+  display: grid;
+  max-width: 76rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (width <= 1180px) {
+  .desktop-nav-link {
+    padding-inline: .54rem;
+    font-size: .84rem;
+  }
+
+  .gallery-page-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+  .site-brand-text span {
+    font-size: 2rem;
+  }
+}
+
+@media (width <= 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-trigger {
+    display: inline-flex;
+  }
+
+  .gallery-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 640px) {
+  .site-header-main {
+    min-height: 4.4rem;
+  }
+
+  .site-brand-logo {
+    width: 3.65rem;
+    height: 3.65rem;
+  }
+
+  .site-brand-text span {
+    font-size: 1.65rem;
+  }
+
+  .site-brand-text small {
+    font-size: .62rem;
+  }
+
+  .gallery-page-hero {
+    padding-block: 4rem 3rem;
+  }
+
+  .gallery-page-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .gallery-page-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

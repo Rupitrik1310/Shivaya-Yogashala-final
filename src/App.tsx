@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import React, { lazy, Suspense } from "react";
+import { getNavItemById, getNavItemByPath, type PageKey } from "./navigation";
 
 const HomePage = lazy(() => import("./components/HomePage"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
 const CoursesPage = lazy(() => import("./components/CoursesPage"));
-const VideosPage = lazy(() => import("./components/VideosPage"));
+const GalleryPage = lazy(() => import("./components/GalleryPage"));
 const ContactPage = lazy(() => import("./components/ContactPage"));
 import { AdminPanel } from "./components/AdminPanel";
 import { Toaster } from "./components/ui/sonner";
@@ -14,14 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function App() {
   const getInitialTab = () => {
-  const path = window.location.pathname.replace("/", "");
-
-  if (path === "contact") return "contact";
-  if (path === "courses") return "courses";
-  if (path === "about") return "about";
-  if (path === "videos") return "videos";
-
-  return "home";
+    return getNavItemByPath(window.location.pathname).id;
 };
 
 const [activeTab, setActiveTab] = useState(getInitialTab());
@@ -39,19 +33,19 @@ const [activeTab, setActiveTab] = useState(getInitialTab());
 // 🔥 Sync tab when URL changes (back/forward/manual URL)
 useEffect(() => {
   const handlePopState = () => {
-    const path = window.location.pathname.replace("/", "");
-
-    if (path === "contact") setActiveTab("contact");
-    else if (path === "courses") setActiveTab("courses");
-    else if (path === "about") setActiveTab("about");
-    else if (path === "videos") setActiveTab("videos");
-    else setActiveTab("home");
+    setActiveTab(getNavItemByPath(window.location.pathname).id);
   };
 
   window.addEventListener("popstate", handlePopState);
   handlePopState(); // run on load
 
   return () => window.removeEventListener("popstate", handlePopState);
+}, []);
+
+useEffect(() => {
+  if (window.location.pathname === "/contact" || window.location.pathname === "/apply") {
+    window.history.replaceState({}, "", "/apply-now");
+  }
 }, []);
 
   // ✅ SEO META + TITLE PER COURSE URL
@@ -102,32 +96,40 @@ useEffect(() => {
     );
   }
 
+  const activeNavItem = getNavItemById(activeTab);
+  const activePage: PageKey = activeNavItem.page;
+
+  const navigateTo = (tab: string) => {
+    const navItem = getNavItemById(tab);
+    setActiveTab(navItem.id);
+    window.history.pushState({}, "", navItem.path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const renderPage = () => {
-    switch (activeTab) {
+    switch (activePage) {
       case "home":
-        return <HomePage onNavigate={setActiveTab} />;
+        return <HomePage onNavigate={navigateTo} />;
       case "about":
         return <AboutPage />;
       case "courses":
-        return <CoursesPage onNavigate={setActiveTab} />;
-      case "videos":
-        return <VideosPage />;
+        return <CoursesPage activeTab={activeTab} onNavigate={navigateTo} />;
+      case "gallery":
+        return <GalleryPage />;
       case "contact":
         return <ContactPage />;
       default:
-        return <HomePage onNavigate={setActiveTab} />;
+        return <HomePage onNavigate={navigateTo} />;
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header
-  activeTab={activeTab}
-  onTabChange={(tab) => {
-    setActiveTab(tab);
-    window.history.pushState({}, "", tab === "home" ? "/" : `/${tab}`);
-  }}
-/>
+        activeTab={activeTab}
+        activePage={activePage}
+        onTabChange={navigateTo}
+      />
 
       <main className="flex-1">
   <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
@@ -145,11 +147,8 @@ useEffect(() => {
 </Suspense>
 </main>
       <Footer
-  onTabChange={(tab) => {
-    setActiveTab(tab);
-    window.history.pushState({}, "", tab === "home" ? "/" : `/${tab}`);
-  }}
-/>
+        onTabChange={navigateTo}
+      />
 
       <Toaster />
     </div>
