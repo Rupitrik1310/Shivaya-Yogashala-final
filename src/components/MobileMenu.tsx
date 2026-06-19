@@ -4,6 +4,7 @@ import shivaLogo from "../assets/shivaya-yoga-logo.webp";
 import { isNavGroupActive, primaryNavItems, type PageKey } from "../navigation";
 
 interface MobileMenuProps {
+  id?: string;
   isOpen: boolean;
   onClose: () => void;
   activeTab: string;
@@ -11,15 +12,15 @@ interface MobileMenuProps {
   onTabChange: (tab: string) => void;
 }
 
-export function MobileMenu({ isOpen, onClose, activeTab, activePage, onTabChange }: MobileMenuProps) {
+export function MobileMenu({ id = 'mobile-menu', isOpen, onClose, activeTab, activePage, onTabChange }: MobileMenuProps) {
   const [openGroup, setOpenGroup] = useState<string | null>(
     activePage === "about" ? "about" : activePage === "courses" ? "courses" : null
   );
 
   if (!isOpen) return null;
 
-  const handleItemClick = (id: string) => {
-    onTabChange(id);
+  const handleItemClick = (itemId: string) => {
+    onTabChange(itemId);
     onClose();
   };
 
@@ -27,7 +28,13 @@ export function MobileMenu({ isOpen, onClose, activeTab, activePage, onTabChange
     <>
       <div className="mobile-menu-backdrop" onClick={onClose} aria-hidden="true" />
 
-      <aside className="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <aside 
+        id={id}
+        className="mobile-menu-panel" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-label="Navigation menu"
+      >
         <div className="mobile-menu-header">
           <button className="mobile-menu-brand" onClick={() => handleItemClick("home")}>
             <img src={shivaLogo} alt="Shivaya Yogashala Logo" className="logo-no-bg" />

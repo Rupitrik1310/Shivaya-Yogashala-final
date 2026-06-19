@@ -1,0 +1,77 @@
+.site-top-strip { transition: all 0.18s ease; }
+
+/* Mobile header & nav overrides for intentional mobile layout */
+@media (max-width: 768px) {
+  /* Hide desktop-specific header strips and navigation */
+  .site-top-strip { display: none !important; }
+  .desktop-nav { display: none !important; }
+
+  /* Keep brand logo visible, hide extra brand text to save space */
+  .site-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    min-height: 56px;
+    gap: 12px;
+  }
+  .site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    padding: 0;
+    min-width: 0;
+  }
+  .site-brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+  .site-brand-text { display: none !important; }
+
+  /* Ensure hamburger is visible and premium */
+  .mobile-menu-trigger {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(255,255,255,0.75);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+    backdrop-filter: blur(16px);
+    color: #1a6b5c;
+    transition: transform 0.2s ease, background 0.2s ease;
+    padding: 0;
+  }
+  .mobile-menu-trigger:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.96);
+  }
+  .mobile-menu-trigger svg {
+    color: #1a6b5c;
+  }
+
+  /* Slide-out mobile menu styling */
+  .mobile-menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 60; backdrop-filter: blur(4px); }
+  .mobile-menu-panel { position: fixed; top: 0; right: 0; height: 100vh; width: 86%; max-width: 320px; background: #fff; z-index: 70; box-shadow: -12px 0 30px rgba(0,0,0,0.18); padding: 18px; display: flex; flex-direction: column; overflow-y: auto; }
+  .mobile-menu-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid #f0f0f0; }
+  .mobile-menu-brand { display: inline-flex; align-items: center; gap: 10px; background: transparent; border: none; padding: 6px; }
+  .mobile-menu-brand img { width: 42px; height: auto; }
+  .mobile-menu-close { background: transparent; border: none; padding: 8px; }
+  .mobile-menu-nav { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .mobile-menu-link { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 8px; background: transparent; text-align: left; border: none; width: 100%; }
+  .mobile-menu-link.is-active { background: rgba(26,107,92,0.06); }
+  .mobile-submenu { padding-left: 10px; display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+  .mobile-submenu-link { padding: 8px; text-align: left; border-radius: 6px; }
+
+  /* Reduce whitespace site-wide on mobile */
+  .container { padding-inline: 12px; }
+  header.site-header { padding-bottom: 6px; }
+}
+
+/* Ensure desktop nav remains visible on larger screens */
+@media (min-width: 769px) {
+  .mobile-menu-trigger { display: none !important; }
+}
